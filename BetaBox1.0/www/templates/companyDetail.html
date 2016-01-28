@@ -1,0 +1,50 @@
+<ion-view title="companyDetail">
+	<ion-header-bar align-title="center" class="bar-dark">
+	<a class="button icon-left ion-chevron-left button-clear button-light" ng-click="goToProduct(prototype.product.name)">Back</a>
+	  <h1 class="title">{{prototype.company.name}}</h1>
+	</ion-header-bar>
+<ion-content>
+<div class="card ">
+  <div class="product_card">
+  <!-- <div class="item item-avatar item item-divider">
+    <img src="{{prototype.company.logo}}">
+    <h2>{{prototype.company.name}}</h2>
+    <p>{{prototype.company.description}}</p>
+  </div> -->
+
+  <div class="item item-body">
+    <h2><strong>{{prototype.company.name}}</strong></h2>
+    <div class="company-logo"><img align="middle" src="{{prototype.company.logo}}"></div>
+    <p>
+      {{prototype.company.description}}.
+    </p>
+    <h4><strong>Products List:</strong></h4>
+    <div class="list card">
+        <a
+           ng-click="goToProduct(prototype.product.name)"
+           class="item item-thumbnail-left">
+          <img ng-src="{{ prototype.product.logo }}">
+          <h2>{{ prototype.product.name}}</h2>
+          <h4>{{ prototype.product.shortDesc }}</h4>
+        </a>
+    </div>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-only item item-divider">
+    <a class="tab-item" href="#">
+      <i class="icon ion-android-globe" ng-click="openWebsite(prototype.company.website)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-facebook-outline" ng-click="openWebsite(prototype.company.facebook)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-twitter-outline" ng-click="openWebsite(prototype.company.twitter)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-instagram-outline" ng-click="openWebsite(prototype.company.instegram)"></i>
+    </a>
+  </div>
+</div>
+</div>
+</ion-content >
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view title="archive">
+	<ion-header-bar align-title="center" class="bar-dark">
+	<a class="button icon-left ion-chevron-left button-clear button-light" href="#/login">Sign Out</a>
+	  <h1 class="title">Archive</h1>
+    <button class="button button-icon icon ion-android-more-vertical"></button>
+	</ion-header-bar>
+  <ion-content >
+  	<div class="list">
+        <a ng-repeat="item in prototype" 
+           ng-click="goToProduct(item.product.name)"
+           class="item item-thumbnail-left">
+          <img ng-src="{{ item.product.logo }}">
+          <h2>{{ item.product.name}}</h2>
+          <h4>{{ item.product.shortDesc }}</h4>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

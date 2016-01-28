@@ -1,0 +1,54 @@
+<ion-view title="productDetail">
+	<ion-header-bar align-title="center" class="bar-dark">
+	<a class="button icon-left ion-chevron-left button-clear button-light" href="#/tab/home">Back</a>
+	  <h1 class="title">{{prototype.product.name}}</h1>
+	</ion-header-bar>
+<ion-content>
+<div class="card ">
+  <div class="product_card">
+  <div class="item item-avatar item item-divider">
+    <img src="{{prototype.company.logo}}" ng-click="goToProduct(prototype.product.name)">
+    <h2 ng-click="goToProduct(prototype.product.name)">{{prototype.company.name}}</h2>
+    <p ng-click="goToProduct(prototype.product.name)">{{prototype.company.description}}</p>
+  </div>
+
+  <div class="item item-body">
+    <h2><strong>{{prototype.product.name}}</strong></h2>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" >
+    <ion-slide align="middle" ng-repeat="img in prototype.product.pics">
+       <img src="{{img}}" class="main_image"></img>
+    </ion-slide>
+  </ion-slide-box>
+    <p>
+      {{prototype.product.longDesc}}.
+    </p>
+    <h4><strong>How does the product make you feel?</strong></h4>
+	   	 <img src="./img/smile.png" ng-click="productFeel(1)"></img>
+	    	<img src="./img/smile2.png" ng-click="productFeel(2)"></img>
+	    	<img src="./img/smile3.png" ng-click="productFeel(3)"></img>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-only item item-divider">
+    <a class="tab-item" href="#">
+      <i class="icon ion-android-share" ng-click="shareAnywhere('I found this Product to be very intersting. Check it out at:', 'Awesome Product', prototype.product.website)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-facebook" ng-click="shareViaFacebook('I found this Product to be very intersting. Check it out at:', prototype.product.logo, prototype.product.website)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-social-twitter" ng-click="shareViaTwitter('I found this Product to be very intersting. Check it out at: ', prototype.product.logo, prototype.product.website)"></i>
+    </a>
+    <!-- <a class="tab-item" href="#">
+      <i class="icon ion-social-instagram" ng-click="shareViaInstagram('BetaBox testing product description message', prototype.product.logo, prototype.product.website)"></i>
+    </a>
+ -->    <a class="tab-item" href="#">
+      <i class="icon ion-social-whatsapp" ng-click="shareViaWhatsApp('I found this Product to be very intersting. Check it out at: ', prototype.product.logo, prototype.product.website)"></i>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-android-globe" ng-click="openWebsite(prototype.product.website)"></i>
+    </a>
+  </div>
+</div>
+</div>
+</ion-content >
+</ion-view>
