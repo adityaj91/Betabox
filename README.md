@@ -1,5 +1,8 @@
 # Betabox (APP)
 This is Version 1.0 of the BetaBox App
+Current temporary sign in ID is (case insensitive):
+Username: test
+Password: test
 
 Instructions to install the app on an android phone:
 
