@@ -1,0 +1,3 @@
+This initial version of the BetaBox website uses the FullPage.js library and is havely based on its examples at the moment.
+The library and examples are available at: http://alvarotrigo.com/fullPage/#firstPage
+The GitHub Repo and documentation for the library is available at: https://github.com/alvarotrigo/fullPage.js
