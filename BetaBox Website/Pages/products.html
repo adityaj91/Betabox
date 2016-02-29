@@ -15,65 +15,6 @@
 	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
 	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<style >
-	#infographic img{
-		padding:0;
-	    margin:0;
-	    height: 80%;
-	    min-width:350px;   
-	    vertical-align:bottom;
-	}
-	#infographic p{
-		height: 80%;
-		width:49%;
-	    min-width:350px;
-	    display:inline-block;
-	 
-	    padding:40px;
-	    -moz-box-sizing:border-box;
-	    box-sizing:border-box;
-	}
-	#infographic video{
-		float: left;
-		padding:0;
-	    margin: 0 0 0 100px;
-	    height: 80%;
-	    min-width:350px;   
-	    vertical-align:bottom;
-	}
-	#verticalTextBox{
-		display: inline-block;
-	    width: 30%;
-	    font-size: 10pt;
-	    margin: 5px;
-	    max-height: 400px;
-	    padding-bottom: 10px;
-	    padding-top: 10px;
-	    border: 3px solid #73AD21;
-	}
-	#verticalTextBox img{
-		display: inline-block;
-	    width: 85%;
-	}
-	.Linkbutton {
-	    display:inline-block;
-		margin: 0px;
-		width:40%;
-		background:#666;
-		background: rgba(0,0,0, 0.5);
-		color: #fff;
-		-webkit-border-radius: 10px;
-	            border-radius: 10px;
-	}
-	.Linkbutton:hover {
-	    background: rgba(0,0,0, 0.8);
-	}
-	#infographic1 {
-		font-size: 10pt;
-		padding: 10px;
-		 display:inline-block;
-	}
-	</style>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -83,6 +24,9 @@
 				paddingBottom: '20px',
 				slidesNavigation: true
 			});
+		});
+		$(function(){
+		  $("#footer").load("footer.html"); 
 		});
 	</script>
 
@@ -100,12 +44,6 @@
 	</ul>
 </div>
 <div id="footer">
-	<div class="socialLinks">
-		<a href="http://facebook.com"><img src="img/facebook_icon.png" class="socialLink"/></a>
-		<a href="http://twitter.com"><img src="img/twitter_icon.png" class="socialLink"/></a>
-		<a href="http://linkedin.com"><img src="img/linkedin_icon.png" class="socialLink"/></a>
-	</div>
-	<p>Copy Rights Reserved for BetaBox &copy; 2016</p>
 </div>
 
 <div id="fullpage">

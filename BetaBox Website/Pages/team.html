@@ -15,36 +15,12 @@
 	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
 	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<style >
-	#image_placeholder img{
-		padding:0;
-	    margin:0;
-	    height: 80%;
-	    max-height: 500px;
-	    max-width: 100%; 
-	}
-	#infographic img{
-		padding-bottom: 50px;
-	    margin:0;
-	    height: 70%;
-	    min-width:350px;   
-	    
-	}
-	#member_info img{
-	    margin:0;
-	    height: 20%;
-	    min-width:5%;   
-	}
-	#member_info p {
-		font-size: 10pt;
-		padding: 10px;
-		 display:inline-block;
-	}
-
-	</style>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			$(function(){
+		  		$("#footer").load("footer.html"); 
+			});
 			$('#fullpage').fullpage({
 				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE'],
 				paddingTop: '70px',
@@ -68,12 +44,6 @@
 	</ul>
 </div>
 <div id="footer">
-	<div class="socialLinks">
-		<a href="http://facebook.com"><img src="img/facebook_icon.png" class="socialLink"/></a>
-		<a href="http://twitter.com"><img src="img/twitter_icon.png" class="socialLink"/></a>
-		<a href="http://linkedin.com"><img src="img/linkedin_icon.png" class="socialLink"/></a>
-	</div>
-	<p>Copy Rights Reserved for BetaBox &copy; 2016</p>
 </div>
 
 <div id="fullpage">
