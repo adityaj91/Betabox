@@ -16,6 +16,38 @@
 	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<style >
+	#image_placeholder{
+		display: inline-block;
+	    margin: 0px;
+	}
+	#image_placeholder img{
+		height:640;
+		width:360;
+	}
+	#pitch_video{
+		display: inline-block;
+	    margin: 0px
+	}
+	#verticalTextBox{
+		display: inline-block;
+	    width: 30%;
+	    height: 80%;
+	    margin: 10px;
+	    border: 3px solid #73AD21;
+	}
+	.Linkbutton {
+	    display:inline-block;
+		margin: 0px;
+		width:40%;
+		background:#666;
+		background: rgba(0,0,0, 0.5);
+		color: #fff;
+		-webkit-border-radius: 10px;
+	            border-radius: 10px;
+	}
+	.Linkbutton:hover {
+	    background: rgba(0,0,0, 0.8);
+	}
 	</style>
 
 	<script type="text/javascript">
@@ -53,10 +85,38 @@
 
 
 <div id="fullpage">
-	<div class="section active" id="section0"><h1>Home Page<h1></div>
-	<div class="section" id="section1"><h1>Home Page</h1></div>
+	<div class="section active" id="section0">
+		<div id = "image_placeholder">
+			<img src="img/image_placeholder.jpg"/>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div id = "image_placeholder">
+			<img src="img/image_placeholder.png"/>
+		</div>
+		<div id = "pitch_video">
+			<video controls autoplay loop muted >
+				  <source src="img/flowers.mp4" type="video/mp4">
+				  <source src="img/flowers.webm" type="video/webm">
+				  Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
 	<div class="section" id="section2"><h1>Home Page</h1></div>
-	<div class="section" id="section3"><h1>Home Page</h1></div>
+	<div class="section" id="section3">
+		<div id="verticalTextBox">
+			<p><STRONG>Package 1</STRONG><br><br>A lot of text in here fbfdfdb fd lfdldfkg ldfglkfdj glkfdjkbfdnv buerbh gjkfdnb ,dfnb fdn gfdg dfnknf bjng keng dnmb kjdbfe jbndf fdkb kdf bkfjdnbjnfb ernbkjbffvnkbfndf kbnreojgkjbgfdnkj gbfdl kdbfgkjdsfbg kdkfgershgnlkng kredf dfhdfsdf rgbg</p><br><br>
+			<a href="./home.html" class="Linkbutton">Free</a>
+		</div>
+		<div id="verticalTextBox">
+			<p><STRONG>Package 2</STRONG><br><br>A lot of text in here fbfdfdb fd lfdldfkg ldfglkfdj glkfdjkbfdnv buerbh gjkfdnb ,dfnb fdn gfdg dfnknf bjng keng dnmb kjdbfe jbndf fdkb kdf bkfjdnbjnfb ernbkjbffvnkbfndf kbnreojgkjbgfdnkj gbfdl kdbfgkjdsfbg kdkfgershgnlkng kredf dfhdfsdf rgbg</p><br><br>
+			<a href="./home.html" class="Linkbutton">$199</a>
+		</div>
+		<div id="verticalTextBox">
+			<p><STRONG>Package 3</STRONG><br><br>A lot of text in here fbfdfdb fd lfdldfkg ldfglkfdj glkfdjkbfdnv buerbh gjkfdnb ,dfnb fdn gfdg dfnknf bjng keng dnmb kjdbfe jbndf fdkb kdf bkfjdnbjnfb ernbkjbffvnkbfndf kbnreojgkjbgfdnkj gbfdl kdbfgkjdsfbg kdkfgershgnlkng kredf dfhdfsdf rgbg</p><br><br>
+			<a href="./home.html" class="Linkbutton">$699</a>
+		</div>
+	</div>
 </div>
 
 </body>
