@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Contact - BetaBox</title>
+	<meta name="author" content="Mohammed Alyahya" />
+	<meta name="description" content="BetaBox Contact Page." />
+	<meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style >
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#B6B6B4', '#4BBFC3', '#4E9258', 'whitesmoke'],
+				paddingTop: '70px',
+				paddingBottom: '20px',
+				slidesNavigation: true
+			});
+		});
+		$(function(){
+		  $("#footer").load("footer.html"); 
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="header">
+	<img src="img/logo.png"/>
+	<ul id="navigation" class="navigationPanel">
+		<li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+		<li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+		<li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+		<li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+		<li data-menuanchor="contact" class="active"><a href="./contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<div id="footer">
+</div>
+
+
+<div id="fullpage">
+	<div class="section active" id="section0"><h1>Contact Us<h1></div>
+	<div class="section" id="section1"><h1>Contact Us</h1></div>
+	<div class="section" id="section2"><h1>Contact Us</h1></div>
+	<div class="section" id="section3"><h1>Contact Us</h1></div>
+</div>
+
+</body>
+</html>

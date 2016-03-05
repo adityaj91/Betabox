@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Team - BetaBox</title>
+	<meta name="author" content="Mohammed Alyahya" />
+	<meta name="description" content="BetaBox Team Page." />
+	<meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(function(){
+		  		$("#footer").load("footer.html"); 
+			});
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE'],
+				paddingTop: '70px',
+				paddingBottom: '20px',
+				slidesNavigation: true
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="header">
+	<img src="img/logo.png"/>
+	<ul id="navigation" class="navigationPanel">
+		<li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+		<li data-menuanchor="team" class="active"><a href="./team.html">The Team</a></li>
+		<li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+		<li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+		<li data-menuanchor="contact"><a href="./contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<div id="footer">
+</div>
+
+<div id="fullpage">
+	<div class="section active" id="section0"><h1>The Team<h1>
+		<div class="slide active" id="infographic">
+	    	<img src="img/image_placeholder.png"/>
+	    </div>
+	    <div class="slide active" id="infographic">
+	    	<img src="img/image_placeholder.png"/>
+	    </div>
+	    <div class="slide active" id="infographic">
+	    	<img src="img/image_placeholder.png"/>
+	    </div>
+	    <div class="slide active" id="infographic">
+	    	<img src="img/image_placeholder.png"/>
+	    </div>
+	</div>
+	<div class="section" id="section1">
+		<div class="slide active" id="member_info">
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br><br>
+	    </div>
+	    <div class="slide active" id="member_info">
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    </div>
+	    <div class="slide active" id="member_info">
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    	<img src="img/generic-user.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p><br>
+	    </div>
+	</div>
+	<div class="section" id="section2"></div>
+</div>
+
+</body>
+</html>
