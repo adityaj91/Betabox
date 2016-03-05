@@ -31,7 +31,7 @@ caption,th {
     text-align: left;
 
 }
-h1,h2,h3,h4,h5,h6 {
+h1,h3,h4,h5,h6 {
     font-weight: normal;
     font-size: 100%;
     margin:0;
@@ -63,6 +63,10 @@ h1{
 }
 p{
 	font-size: 2em;
+}
+h2 {
+	margin: 0;
+	font-size: 3em;
 }
 /*.intro p{
 	width: 50%;
@@ -244,18 +248,93 @@ p{
 		padding-bottom: 50px;
 	    margin:0;
 	    height: 70%;
-	    min-width:350px;   
-	    
+	    min-width:350px;       
 	}
-	#member_info img{
-	    margin:0;
-	    height: 20%;
-	    min-width:5%;   
+	#pic_info {
+		padding-left: 7%;
 	}
-	#member_info p {
-		font-size: 10pt;
+	#pic_info img{
+	    width: 100px;
+		height: 100px;
+		border-radius: 150px;
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		float: left;
+	}
+	#pic_info p {
+		max-width: 50%;
+		font-size: 12pt;
+		padding-left: 10px;
+		padding-bottom: 10px;
+	}
+	#reasonsToWork {
+		padding-left: 7%;
+	}
+	#reasonsToWork p{
+		float: left;
+		max-width: 50%;
+		text-align: left;
 		padding: 10px;
-		 display:inline-block;
+	}
+	#reasonsToWork img{
+		vertical-align: text-top;
+		width: 400px;
+		height: 200px;
+	}
+	#testimonial {
+		padding-left: 5%;
+	}
+	#testimonial img{
+	    width: 300px;
+		height: 300px;
+		border-radius: 150px;
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#testimonial p{
+		float: left;
+		max-width: 50%;
+		text-align: left;
+		padding: 10px;
+	}
+	#blog_info {
+		padding-left: 25%;
+	}
+	#blog_info img{
+	    width: 100px;
+		height: 100px;
+		border-radius: 150px;
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		float: left;
+	}
+	#blog_info p {
+		max-width: 75%;
+		font-size: 12pt;
+		padding: 10px;
+	}
+	#verticalTextBoxHomepage{
+		display: inline-block;
+	    width: 30%;
+	    font-size: 10pt;
+	    margin: 5px;
+	    max-height: 400px;
+	    padding-bottom: 10px;
+	    padding-top: 10px;
+	    border: 3px solid #E6E6E6;
+	}
+	#verticalTextBoxHomepage img{
+		display: inline-block;
+	    width: 85%;
 	}
 /*#menu li {
 	display:inline-block;
