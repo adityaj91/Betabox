@@ -12,9 +12,14 @@ try{
 	if(isNaN(args)){
     	throw new Error("Not a number");
   	}
+  	// No port number entered. 
+  	if(args == 0){
+  		throw new Error("No port entered.");
+  	}
+  	console.log(args);
 	server = app.listen(args, function() {
     	console.log('Ready on port %d', server.address().port);
-    	console.log("Server listening on http://localhost:%s", args);
+    	console.log("Server listening on http://localhost:%s", server.address().port);
 	});
   	server.once('error', function(err) {
   	  console.log("Server in use");
