@@ -82,7 +82,8 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
     views: {
       'mainView': {
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'templates/tabs.html',
+        controller: 'tabsCtrl'
       }
     }
   })
