@@ -12,7 +12,7 @@
         <a ng-repeat="item in homeViewList" 
            ng-click="goToProduct(item.product.name)"
            class="item item-thumbnail-left">
-          <img ng-src="{{ item.product.logo }}">
+          <img ng-src="{{ item.product.pics[0] }}">
           <h2>{{ item.product.name }}</h2>
           <h4>{{ item.product.shortDesc }}</h4>
         </a>

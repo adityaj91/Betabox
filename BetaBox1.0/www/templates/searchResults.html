@@ -9,7 +9,7 @@
         <a ng-repeat="item in searchResults" 
            ng-click="goToResult(item.object.name, item.type)"
            class="item item-thumbnail-left">
-          <img ng-src="{{ item.object.logo }}">
+          <img ng-src="{{ item.object.pics[0] }}">
           <h2>{{ item.object.name }}</h2>
           <h4>{{ item.type }}</h4>
         </a>
