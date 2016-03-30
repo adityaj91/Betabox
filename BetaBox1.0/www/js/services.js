@@ -552,6 +552,7 @@ angular.module('betaBox.services', [])
 
     var homeViewList = prototype;
     var archiveViewList = prototype;
+    var searchViewList = [];
 
   return {
     all: function() {
@@ -588,18 +589,35 @@ angular.module('betaBox.services', [])
       }
       return companiesList;
     },
-    updateViewList: function(state, sort, ascendingOrder, companyFilter, rateFilter, distrbutionDateFilter, catagoryFilter) {
-      var viewList = prototype.slice();
+    filterAndSort: function(state, sort, ascendingOrder, companyFilter, rateFilter, distrbutionDateFilter, catagoryFilter) {
+      
+      if(sort == undefined && companyFilter == undefined && rateFilter == undefined && distrbutionDateFilter == undefined && catagoryFilter == undefined) {
+        return false;
+      }
+
+      var viewList = [];
+
+      if(companyFilter == undefined && rateFilter == undefined && distrbutionDateFilter == undefined && catagoryFilter == undefined) {
+        if(state == "tabs.home") {
+          viewList = homeViewList;
+        } else if(state == "tabs.archive") {
+          viewList = archiveViewList;
+        } else {
+          return false;
+        }
+      } else {
+        viewList = prototype.slice();
+      }
       var lastIndex = viewList.length -1;
       for (var i = lastIndex; i >= 0; i--) {
-        if(companyFilter != "All" && companyFilter != "") {
+        if(companyFilter != "All" && companyFilter != undefined) {
             if (viewList[i].company.name != companyFilter) {
               viewList.splice(i, 1);
               continue;
             }
         }
 
-        if (rateFilter != "All" && rateFilter != "") {
+        if (rateFilter != "All" && rateFilter != undefined) {
             var productRating = viewList[i].user.rating;
           if(rateFilter == "Not Rated") {
             if(productRating > 0) {
@@ -631,7 +649,7 @@ angular.module('betaBox.services', [])
           }
         }
 
-        if(distrbutionDateFilter != "All" && distrbutionDateFilter != "") {
+        if(distrbutionDateFilter != "All" && distrbutionDateFilter != undefined) {
             var currentDate = new Date();
             var productDate = new Date(viewList[i].product.distrbutionDate);
             
@@ -685,6 +703,7 @@ angular.module('betaBox.services', [])
             return 0;
         })
       }
+
       if(state == "tabs.home") {
         homeViewList = viewList;
       } else if(state == "tabs.archive") {
@@ -693,6 +712,44 @@ angular.module('betaBox.services', [])
         return false;
       }
       return true;
+    },
+    search: function(searchString) {
+      var searchingFor = searchString.split(" "); 
+      var results = [];
+      for (var i = 0; i < prototype.length; i++) {
+        var stringsFoundInProduct = 0;
+        var stringsFoundInCompany = 0;
+        for (var j = 0; j < searchingFor.length; j++) {
+            var searchRegex = new RegExp(searchingFor[j] , "i");
+            if (    prototype[i].product.name.search(searchRegex) > -1 
+                ||  prototype[i].product.shortDesc.search(searchRegex) > -1
+                ||  prototype[i].product.longDesc.search(searchRegex) > -1)
+                stringsFoundInProduct++;
+
+            if (    prototype[i].company.name.search(searchRegex) > -1 
+                ||  prototype[i].company.description.search(searchRegex) > -1)
+                stringsFoundInCompany++;
+        }
+        if(stringsFoundInProduct > 0)
+            results.push([stringsFoundInProduct, { object: prototype[i].product, type: "Product"}]);
+        if(stringsFoundInCompany > 0)
+            results.push([stringsFoundInCompany, { object: prototype[i].company, type: "Company"}]);
+      }
+      results.sort(function(a, b) {
+        if (a[0] === b[0]) {
+            return 0;
+        }
+        else {
+            return (a[0] < b[0]) ? 1 : -1;
+        }
+      });
+      searchViewList = [];
+      for(var i=0; i<results.length; i++) {
+        searchViewList.push(results[i][1]);
+      }
+    },
+    getSearchResults: function() {
+      return searchViewList;
     },
     getViewList: function(state) {
       if(state == "tabs.home") {
@@ -713,6 +770,14 @@ angular.module('betaBox.services', [])
     get: function(productName) {
       for (var i = 0; i < prototype.length; i++) {
         if (prototype[i].product.name == productName) {
+          return prototype[i];
+        }
+      }
+      return null;
+    },
+    getCompany: function(companyName) {
+      for (var i = 0; i < prototype.length; i++) {
+        if (prototype[i].company.name == companyName) {
           return prototype[i];
         }
       }

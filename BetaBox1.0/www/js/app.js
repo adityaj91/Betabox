@@ -135,6 +135,16 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
         controller: 'companyDetailCtrl'
       }
     }
+  })
+
+  .state('searchResults', {
+    url: '/searchResults',
+    views: {
+      'mainView': {
+        templateUrl: 'templates/searchResults.html',
+        controller: 'searchResultsCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

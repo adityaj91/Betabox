@@ -31,10 +31,6 @@
           	<div ng-show="sorting">
 	          	<div></br></div>
 	          	<ion-list>
-				  <!-- <ion-radio icon="ion-arrow-up-b" ng-value="Product" ng-model="sort.selected" selected>Product Name</ion-radio>
-				  <ion-radio ng-value="Company" ng-model="sort.selected">Company Name</ion-radio>
-				  <ion-radio ng-value="Date" ng-model="sort.selected">Distrbution Date</ion-radio>
-				  <ion-radio ng-value="Rate" ng-model="sort.selected">Rate</ion-radio> -->
 				  	<ion-radio icon="{{sort.direction}}" ng-click="changeSortDirection()" ng-repeat="item in sortingOptions"
 			                   ng-value="item.value"
 			                   ng-model="sort.selected">
@@ -104,7 +100,7 @@
           <div class="list list-inset" ng-show="searching">
           	<label class="item item-input">
           		<i class="icon ion-search placeholder-icon"></i>
-          		<input type="text" placeholder="ex. Product Name" ng-model="searchField.data">
+          		<input type="text" placeholder="What are you looking for?" ng-model="searchField.data">
           	</label>
           </div>
         </ion-item>
