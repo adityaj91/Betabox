@@ -337,6 +337,9 @@ h2 {
 		font-size: 8pt;
 		color: red;
 	}
+	#login-help p {
+		font-size: 8pt;
+	}
 
 /*#menu li {
 	display:inline-block;
