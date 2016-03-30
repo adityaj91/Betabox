@@ -6,7 +6,7 @@
 
 var MongoClient = require('mongodb').MongoClient
     , format = require('util').format;
-MongoClient.connect('mongodb://104.236.168.166:27017/users', function (err, db) {
+MongoClient.connect('mongodb://root:Betab0x@104.236.168.166:27017/users', function (err, db) {
     if (err) {
         throw err;
     } else {
