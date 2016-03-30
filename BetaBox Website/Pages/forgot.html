@@ -55,8 +55,11 @@
 		<form method="post" action="javascript:toggle_visibility();">
         <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
         <p class="submit"><input type="submit" name="commit" value="Reset"></p>
-        <div id="successful" style="visibility: hidden">
-        	<p> An email has been sent to reset your password<p>
+        <div id="successful" style="visibility: hidden" >
+        	<p> An email has been sent containing your password<p>
+        </div>
+        <div id="unsuccessful" style="visibility: hidden" >
+        	<p> The username of password <br> is incorrect<p>
         </div>
     </div>
   </section>
@@ -66,7 +69,6 @@
 </div>
 <script type="text/javascript">
    function toggle_visibility() {
-   		// alert("works");
        document.getElementById("successful").style.visibility = "visible";
    }
 </script>
