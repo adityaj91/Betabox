@@ -251,15 +251,11 @@ h2 {
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
-	/*#pic_info p {
-		font-size: 12pt;
-		padding-bottom: 2%;
-	}*/
 	#adi {
 		float: left;
 		max-width: 40%;
 		margin: 0 auto;
-		padding-left: 5%;
+		padding-left: 7%;
 	}
 	#adi img {
 		float: left;
@@ -269,7 +265,8 @@ h2 {
 		float: left;
 		max-width: 40%;
 		margin: 0 auto;
-		padding-left: 5%;
+		padding-left: 7%;
+		padding-top: 5%;
 	}
 	#mo img {
 		float: left;
@@ -290,35 +287,13 @@ h2 {
 		max-width: 40%;
 		margin: 0 auto;
 		padding-left: 5%;
+		padding-top: 5%;
 	}
 	#just img {
 		float: left;
 		width: 30%;
 	}
-	/*#left {
-		padding-left: 15%;
-		float: left;
-		margin: 0 auto;
-	}
-	#left img {
-		float: left;
-	}
-	#left p {
-		font-size: 12pt;
-		text-align: left;
-		padding-left: 2%;
-
-	}
-	#right {
-		float: left;
-		margin: 0 auto;
-	}
-	#right p {
-		text-align: left;
-	}
-	#right img {
-		float: left;
-	}*/
+	
 	#reasonsToWork {
 		padding-left: 7%;
 	}
