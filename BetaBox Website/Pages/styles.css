@@ -227,9 +227,9 @@ h2 {
 		 display:inline-block;
 	}
 	/*From Home*/
-	#image_placeholder{
+	#product{
 		display: inline-block;
-	    margin: 0px;
+	    margin: 0 auto;
 	}
 	#pitch_video{
 		display: inline-block;
@@ -240,14 +240,13 @@ h2 {
 	/*From Team Page*/
 	#image_placeholder img{
 	    max-height: 100%;
-	    max-width: 100%; 
+	    margin: 0 auto;
 	}
-
 	#pic_info img{
 	    width: 10%;
 		height: 10%;
-		border-radius: 120px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+		border-radius: 150px;
+		box-shadow: 0 0 15px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
@@ -293,22 +292,20 @@ h2 {
 		float: left;
 		width: 30%;
 	}
-	
-	#reasonsToWork {
+	/*#reasonsToWork {
 		padding-left: 5%;
-		float: left;
+		margin: 0 auto;
 	}
 	#reasonsToWork p{
 		max-width: auto;
 		text-align: left;
 		padding-left: 3%;
-		padding-right: 7%;
+		padding-right: 5%;
 	}
 	#reasonsToWork img{
-		width: 400px;
-		height: 200px;
+		height: 50%;
 		float: left;
-	}
+	}*/
 	#testimonial {
 		padding-left: 5%;
 	}
@@ -362,7 +359,7 @@ h2 {
 	}
 	#verticalTextBoxHomepage img{
 		display: inline-block;
-	    width: 85%;
+	    width: 65%;
 	}
 
 	/*Login Page Stuff*/
