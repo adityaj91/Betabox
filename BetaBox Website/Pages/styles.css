@@ -243,22 +243,27 @@ h2 {
 	    max-width: 100%; 
 	}
 	#pic_info {
-		padding-left: 7%;
+		padding-left: 15%;
 	}
 	#pic_info img{
-	    width: 100px;
-		height: 100px;
+	    width: 10%;
+		height: 10%;
 		border-radius: 120px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
-		float: left;
+		
 	}
 	#pic_info p {
 		max-width: 50%;
 		font-size: 12pt;
-		padding-left: 20%;
 		padding-bottom: 2%;
+	}
+	#left img{
+		float: left;
+	}
+	#right img{
+		float: left;
 	}
 	#reasonsToWork {
 		padding-left: 7%;
