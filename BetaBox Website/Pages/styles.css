@@ -231,9 +231,15 @@ h2 {
 		display: inline-block;
 	    margin: 0 auto;
 	}
-	#pitch_video{
+	#sample {
 		display: inline-block;
-	    margin: 0px
+		float: left;
+		padding-left: 3%;
+	}
+	#pitch_video {
+		display: inline-block;
+	    float: right;
+	    padding-right: 3%;
 	}
 	/*End Home*/
 
