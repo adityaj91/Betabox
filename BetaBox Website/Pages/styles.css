@@ -260,24 +260,24 @@ h2 {
 		float: left;
 		width: 30%;
 	}
-	#mo {
+	#ash {
 		float: left;
 		max-width: 40%;
 		margin: 0 auto;
 		padding-left: 7%;
 		padding-top: 5%;
 	}
-	#mo img {
+	#ash img {
 		float: left;
 		width: 30%;
 	}
-	#ash {
+	#mo {
 		float: left;
 		max-width: 40%;
 		margin: 0 auto;
 		padding-left: 5%;
 	}
-	#ash img {
+	#mo img {
 		float: left;
 		width: 30%;
 	}
