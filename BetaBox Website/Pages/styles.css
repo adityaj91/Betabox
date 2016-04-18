@@ -1,67 +1,67 @@
 @CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
     padding: 0;
     margin: 0;
 }
-a{
+a {
 	text-decoration:none;
 }
 table {
     border-spacing: 0;
 }
-fieldset,img {
+fieldset, img {
     border: 0;
 }
-address,caption,cite,code,dfn,em,strong,th,var {
+address, caption, cite, code, dfn, em, strong, th, var {
     font-weight: normal;
     font-style: normal;
 }
-strong{
+strong {
 	font-weight: bold;
 }
-ol,ul {
+ol, ul {
     list-style: none;
     margin:0;
     padding:0;
 }
-caption,th {
+caption, th {
     text-align: left;
 
 }
-h1,h3,h4,h5,h6 {
+h1, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 100%;
     margin:0;
     padding:0;
     color:#444;
 }
-q:before,q:after {
+q:before, q:after {
     content:'';
 }
-abbr,acronym { border: 0;
+abbr, acronym { border: 0;
 }
 
 
 /* Custom CSS
  * --------------------------------------- */
-body{
+body {
 	font-family: arial,helvetica;
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
-.wrap{
+.wrap {
 	margin-left: auto;
 	margin-right: auto;
 	width: 960px;
 	position: relative;
 }
-h1{
+h1 {
 	font-size: 6em;
 }
-p{
+p {
 	font-size: 2em;
 }
 h2 {
@@ -73,10 +73,10 @@ h2 {
 	margin: 0 auto;
 	font-size: 1.5em;
 }*/
-.section{
+.section {
 	text-align:center;
 }
-#header{
+#header {
 	position:fixed;
 	height: 50px;
 	display:block;
@@ -90,7 +90,7 @@ h2 {
 #header img {
 	margin: 0 0 0 100px;
 }
-#footer{
+#footer {
 	position:fixed;
 	height: 27px;
 	display:block;
@@ -113,14 +113,14 @@ h2 {
 	float:right;
 	margin: 2px 45% 0 0;
 }
-.socialLinks{
+.socialLinks {
 	display:inline-block;
 	margin: 0 0 0 50px;
 }
-#header{
+#header {
 	top:0px;
 }
-#footer{
+#footer {
 	bottom:0px;
 }
 #navigation li {
@@ -132,30 +132,30 @@ h2 {
 	-webkit-border-radius: 10px;
             border-radius: 10px;
 }
-#navigation li.active{
+#navigation li.active {
 	background:#666;
 	background: rgba(0,0,0, 0.5);
 	color: #fff;
 }
-#navigation li a{
+#navigation li a {
 	text-decoration:none;
 	color: #000;
 }
-#navigation li.active a:hover{
+#navigation li.active a:hover {
 	color: #000;
 }
-#navigation li:hover{
+#navigation li:hover {
 	background: rgba(255,255,255, 0.8);
 }
 #navigation li a,
-#navigation li.active a{
+#navigation li.active a {
 	padding: 9px 18px;
 	display:block;
 }
-#navigation li.active a{
+#navigation li.active a {
 	color: #fff;
 }
-#navigation{
+#navigation {
 	position:center;
 	float: right;
 	/*top:20px;*/
@@ -169,7 +169,7 @@ h2 {
 
 /*Justin: 2/29 migraction from products to styles*/
 /*Decide on infographics or return them to local html files*/
-	#infographic img{
+	#infographic img {
 		padding-bottom: 50px;
 		padding:40;
 	    margin:0;
@@ -177,7 +177,7 @@ h2 {
 	    min-width:350px;   
 	    vertical-align:bottom;
 	}
-	#infographic p{
+	#infographic p {
 		height: 80%;
 		width:49%;
 	    min-width:350px;
@@ -186,7 +186,7 @@ h2 {
 	    -moz-box-sizing:border-box;
 	    box-sizing:border-box;
 	}
-	#infographic video{
+	#infographic video {
 		float: left;
 		padding:0;
 	    margin: 0 0 0 100px;
@@ -194,7 +194,7 @@ h2 {
 	    min-width:350px;   
 	    vertical-align:bottom;
 	}
-	#verticalTextBox{
+	#verticalTextBox {
 		display: inline-block;
 	    width: 30%;
 	    font-size: 10pt;
@@ -204,7 +204,7 @@ h2 {
 	    padding-top: 10px;
 	    border: 3px solid #73AD21;
 	}
-	#verticalTextBox img{
+	#verticalTextBox img {
 		display: inline-block;
 	    width: 85%;
 	}
@@ -234,7 +234,7 @@ h2 {
 		max-width: 90%;
 	}
 	/*From Home*/
-	#product{
+	#product {
 		display: inline-block;
 	    margin: 0 auto;
 	}
@@ -250,7 +250,7 @@ h2 {
 	    padding-left: 3%;
 	    margin: 0 auto;
 	}
-	#pitch_video video{
+	#pitch_video video {
 		display: inline-block;
 		max-width: 100%;
 	    margin: 0 auto;
@@ -258,11 +258,11 @@ h2 {
 	/*End Home*/
 
 	/*From Team Page*/
-	#image_placeholder img{
+	#image_placeholder img {
 	    max-height: 100%;
 	    margin: 0 auto;
 	}
-	#pic_info img{
+	#pic_info img {
 	    width: 10%;
 		height: 10%;
 		border-radius: 150px;
@@ -315,7 +315,7 @@ h2 {
 	#testimonial {
 		padding-left: 5%;
 	}
-	#testimonial img{
+	#testimonial img {
 	    width: 300px;
 		height: 300px;
 		border-radius: 150px;
@@ -325,7 +325,7 @@ h2 {
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
-	#testimonial p{
+	#testimonial p {
 		float: left;
 		max-width: 50%;
 		text-align: left;
@@ -338,7 +338,7 @@ h2 {
 		padding-left: 20%;
 		margin: 0 auto;
 	}
-	#blog_info img{
+	#blog_info img {
 	    width: 100px;
 		height: 100px;
 		border-radius: 150px;
@@ -357,7 +357,7 @@ h2 {
 		padding: 2%;
 		margin: 0 auto;
 	}
-	#verticalTextBoxHomepage{
+	#verticalTextBoxHomepage {
 		display: inline-block;
 	    width: 30%;
 	    font-size: 10pt;
@@ -367,7 +367,7 @@ h2 {
 	   
 	    border: 3px solid #E6E6E6;
 	}
-	#verticalTextBoxHomepage img{
+	#verticalTextBoxHomepage img {
 		display: inline-block;
 	    width: 65%;
 	}
