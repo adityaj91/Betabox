@@ -226,6 +226,13 @@ h2 {
 		padding: 10px;
 		 display:inline-block;
 	}
+	#productsVideo {
+		margin: 0 auto;
+		max-width: 75%;
+	}
+	#productsVideo video {
+		max-width: 100%;
+	}
 	/*From Home*/
 	#product{
 		display: inline-block;
