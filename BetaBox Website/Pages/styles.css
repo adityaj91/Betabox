@@ -235,11 +235,19 @@ h2 {
 		display: inline-block;
 		float: left;
 		padding-left: 3%;
+		margin: 0 auto;
 	}
 	#pitch_video {
 		display: inline-block;
-	    float: right;
-	    padding-right: 3%;
+		max-width: 50%;
+	    float: left;
+	    padding-left: 3%;
+	    margin: 0 auto;
+	}
+	#pitch_video video{
+		display: inline-block;
+		max-width: 100%;
+	    margin: 0 auto;
 	}
 	/*End Home*/
 
