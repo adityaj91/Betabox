@@ -176,6 +176,9 @@ h2 {
 	    height: 70%;
 	    min-width:350px;   
 	    vertical-align:bottom;
+	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
 	#infographic p {
 		height: 80%;
@@ -308,6 +311,23 @@ h2 {
 	#just img {
 		float: left;
 		width: 30%;
+	}
+	#infographic2 img {
+	    margin:0 auto;
+	    margin-top: 3%;
+	    height: 70%;
+	    border-radius: 180px;
+		box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#infographic2 p {
+	    width:60%;
+	    display:inline-block;
+	    padding:5%;
+	 	text-align: top;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
 	}
 	#testimonial {
 		padding-left: 5%;
