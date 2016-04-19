@@ -31,7 +31,7 @@ caption, th {
     text-align: left;
 
 }
-h1, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 100%;
     margin:0;
@@ -258,10 +258,6 @@ h2 {
 	/*End Home*/
 
 	/*From Team Page*/
-	#image_placeholder img {
-	    max-height: 100%;
-	    margin: 0 auto;
-	}
 	#pic_info img {
 	    width: 10%;
 		height: 10%;
@@ -330,6 +326,20 @@ h2 {
 		max-width: 50%;
 		text-align: left;
 		padding-left: 2%;
+	}
+	#ourStory {
+		max-width: 90%;
+		margin: 0 auto;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	#ourStory img {
+		float: left;
+		margin: 0 auto;
+	}
+	#ourStory p {
+		margin: 0 auto;
+		margin-top: 5%;
 	}
 	/*End Team Page*/
 
