@@ -201,15 +201,14 @@ h2 {
 		display: inline-block;
 	    width: 30%;
 	    font-size: 10pt;
-	    margin: 5px;
-	    max-height: 400px;
-	    padding-bottom: 10px;
-	    padding-top: 10px;
+	    margin: 1%;
+	    height: 400px;
+	    padding-bottom: 2%;
 	    border: 3px solid #73AD21;
 	}
 	#verticalTextBox img {
 		display: inline-block;
-	    width: 85%;
+	    width: 65%;
 	}
 	.Linkbutton {
 	    display:inline-block;
