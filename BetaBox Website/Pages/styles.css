@@ -311,16 +311,22 @@ h2 {
 		padding:40;
 	    margin:0 auto;
 	    min-height: 90%;
-	     
 	    vertical-align:bottom;
 	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
+	#infographic2 {
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
 	#infographic2 img {
 	    margin:0 auto;
 	    margin-top: 3%;
 	    height: 70%;
+	    width: 360px;
+		height: 360px;
 	    border-radius: 180px;
 		box-shadow: 0 0 15px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
@@ -328,9 +334,10 @@ h2 {
 	}
 	#infographic2 p {
 	    width:60%;
-	    display:inline-block;
-	    padding:5%;
-	 	text-align: top;
+	    margin: 0 auto;
+	    display: inline-block;
+	    vertical-align: top;
+	    padding-top: 10%;
 	    -moz-box-sizing:border-box;
 	    box-sizing:border-box;
 	}
