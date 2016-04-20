@@ -391,11 +391,17 @@ h2 {
 
 	/*Login Page Stuff*/
 	#forgotPass p {
+		margin: 0 auto;
 		font-size: 8pt;
 		color: red;
-	}
+	} 
 	#login-help p {
-		font-size: 8pt;
+		margin-top: 2%;
+		font-size: 6pt;
+		color: red;
+	}
+	#loginBox {
+		height: 100%;
 	}
 	/*End of Login Page Stuff*/
 
