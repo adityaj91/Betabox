@@ -174,10 +174,10 @@ h2 {
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
 	#infographic p {
-		height: 80%;
 		width:49%;
 	    display:inline-block;
-	    padding:2%;
+	 	vertical-align: top;
+	 	padding-top: 5%;
 	    -moz-box-sizing:border-box;
 	    box-sizing:border-box;
 	}
