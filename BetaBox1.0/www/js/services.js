@@ -29,7 +29,7 @@ angular.module('betaBox.services', [])
 
   // Some fake testing data
   var prototype = [
-        {product: { name: "The Barisieur 1", 
+        {product: { name: "The Barisieur", 
                     logo:"http://static1.squarespace.com/static/538a1d7ae4b0458773389b55/538a1d88e4b0a339fd22804f/563bd191e4b0685e3ac790e3/1446760884817/DN7B3910.JPG?format=1500w", 
                     pics:["./img/The Barisieur/DN7B3910.JPG", "./img/The Barisieur/Bedside+2+barid.jpg", "./img/The Barisieur/IMG_0429.jpg", "./img/The Barisieur/Websubmission+2+.jpg"] , 
                     shortDesc: "Alarm Clock And Coffee Maker", 
@@ -54,7 +54,7 @@ angular.module('betaBox.services', [])
                     twitter: "https://twitter.com/Renouf28", 
                     instegram: "https://www.instagram.com/joshrenouf/"}},
         
-        {product: { name: "The Golden Goose Egg Scrambler 1", 
+        {product: { name: "The Golden Goose Egg Scrambler", 
                     logo:"https://s3.amazonaws.com/images1.vat19.com/golden-goose/golden-goose.jpg", 
                     pics:["./img/The Golden Goose Egg Scrambler/golden-goose.jpg", "./img/The Golden Goose Egg Scrambler/grid-cell-21963-1418321989-38.jpg"] , 
                     shortDesc: "Scramble eggs without breaking the shell", 
@@ -81,45 +81,20 @@ angular.module('betaBox.services', [])
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/"}},
         
-        {product: { name: "The Barisieur 2", 
-                    logo:"http://static1.squarespace.com/static/538a1d7ae4b0458773389b55/538a1d88e4b0a339fd22804f/563bd191e4b0685e3ac790e3/1446760884817/DN7B3910.JPG?format=1500w", 
-                    pics:["./img/The Barisieur/DN7B3910.JPG", "./img/The Barisieur/Bedside+2+barid.jpg", "./img/The Barisieur/IMG_0429.jpg", "./img/The Barisieur/Websubmission+2+.jpg"] , 
-                    shortDesc: "Alarm Clock And Coffee Maker", 
-                    longDesc: "The Barisieur is an alarm clock and coffee brewer. It eases the user into the day with the subtle movement of stainless steel ballbearings that boil "
-                    +"the water through induction heating, accompanied by the smell of freshly brewed coffee. It encourages a ritual before going to sleep, signalling to the body and "
-                    +"mind that it is time to unwind and relax. Living slow even when times are fast.", 
-                    website: "http://www.joshrenoufdesign.com/" , 
-                    facebook: "https://www.facebook.com/barisieur", 
-                    twitter: "https://twitter.com/Renouf28", 
-                    instegram: "https://www.instagram.com/joshrenouf/", 
-                    distrbutionDate: "Jun 1, 2015"}, 
-        user: { rating: 0, 
-                duration: 0, 
-                facebookShare: false, 
-                twitterShare: false, 
-                instgramShare: false}, 
-        company: {  name: "Josh Renouf Design", 
-                    logo: "./img/The Barisieur/1516259_1448405478777540_1378550841_a.jpg", 
-                    description: "British designer with a tenacious attitude for innovation", 
-                    website: "http://www.joshrenoufdesign.com/" , 
-                    facebook: "https://www.facebook.com/barisieur", 
-                    twitter: "https://twitter.com/Renouf28", 
-                    instegram: "https://www.instagram.com/joshrenouf/"}},
-        
-        {product: { name: "The Golden Goose Egg Scrambler 2", 
-                    logo:"https://s3.amazonaws.com/images1.vat19.com/golden-goose/golden-goose.jpg", 
-                    pics:["./img/The Golden Goose Egg Scrambler/golden-goose.jpg", "./img/The Golden Goose Egg Scrambler/grid-cell-21963-1418321989-38.jpg"] , 
-                    shortDesc: "Scramble eggs without breaking the shell", 
-                    longDesc: "Have you ever enjoyed a scrambled hard-boiled egg? Trust us, you want to. Take the Golden Goose Egg Scrambler for a spin and serve up a perfectly scrambled "
-                    +"egg — without cracking it open! This ingenious device lets you scramble the egg from within its own shell.To create the flawless “Golden Goose” scramble, place a raw egg in the "
-                    +"elastic insert and secure the two sides with the locking ring. Then just wind the nylon cords and pull on the integrated handles to use centrifugal force to scramble the egg.The "
-                    +"locking ring makes sure the egg isn’t going anywhere, while the dishwasher-safe inserts cradle the egg and keep it whole while it scrambles. Within seconds, you’ll create a beautiful "
-                    +"golden egg you can crack open or boil.", 
-                    website: "https://www.vat19.com/item/the-golden-goose-egg-scrambler" , 
+        {product: { name: "Handheld Tape Dispenser", 
+                    logo:"https://images.vat19.com/covers/large/handheld-tape-dispenser.jpg", 
+                    pics:["./img/Handheld Tape Dispenser/1.jpg", "./img/Handheld Tape Dispenser/2.jpg", "./img/Handheld Tape Dispenser/3.jpg", "./img/Handheld Tape Dispenser/4.jpg"] , 
+                    shortDesc: "Pull and cut transparent tape with one hand", 
+                    longDesc: "The Handheld Automatic Tape Dispenser cuts equal length strips of transparent tape with a single squeeze of the trigger."
+                    +"Tucking a corner of wrapping paper over a package and holding it in place with one hand makes tearing off a piece of transparent tape "
+                    +"with the other hand an awkward maneuver. The Handheld Automatic Tape Dispenser comes to the rescue by spooling out and cutting a perfect-length piece of tape with one swift motion."
+                    +"For a custom length of tape, squeeze the trigger, pull out the desired amount of tape, and release. Since the blade is housed internally, you’ll never accidentally cut yourself."
+                    +"Seal envelopes, hang children’s art work, and keep everything together with the Handheld Automatic Tape Dispenser.", 
+                    website: "https://www.vat19.com/item/handheld-tape-dispenser" , 
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "Jun 1, 2015"}, 
+                    distrbutionDate: "May 1, 2015"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -133,45 +108,71 @@ angular.module('betaBox.services', [])
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/"}},
         
-        {product: { name: "The Barisieur 3", 
-                    logo:"http://static1.squarespace.com/static/538a1d7ae4b0458773389b55/538a1d88e4b0a339fd22804f/563bd191e4b0685e3ac790e3/1446760884817/DN7B3910.JPG?format=1500w", 
-                    pics:["./img/The Barisieur/DN7B3910.JPG", "./img/The Barisieur/Bedside+2+barid.jpg", "./img/The Barisieur/IMG_0429.jpg", "./img/The Barisieur/Websubmission+2+.jpg"] , 
-                    shortDesc: "Alarm Clock And Coffee Maker", 
-                    longDesc: "The Barisieur is an alarm clock and coffee brewer. It eases the user into the day with the subtle movement of stainless steel ballbearings that boil "
-                    +"the water through induction heating, accompanied by the smell of freshly brewed coffee. It encourages a ritual before going to sleep, signalling to the body and "
-                    +"mind that it is time to unwind and relax. Living slow even when times are fast.", 
-                    website: "http://www.joshrenoufdesign.com/" , 
-                    facebook: "https://www.facebook.com/barisieur", 
-                    twitter: "https://twitter.com/Renouf28", 
-                    instegram: "https://www.instagram.com/joshrenouf/", 
-                    distrbutionDate: "Jul 1, 2015"}, 
+        {product: { name: "VSSL Survival Kit Flashlight", 
+                    logo:"https://images.vat19.com/covers/large/vssl-survival-kit.jpg", 
+                    pics:["./img/VSSL Survival Kit Flashlight/1.jpg", "./img/VSSL Survival Kit Flashlight/2.jpg", "./img/VSSL Survival Kit Flashlight/3.jpg", "./img/VSSL Survival Kit Flashlight/4.jpg"] , 
+                    shortDesc: "LED utility flashlight and compact survival kit", 
+                    longDesc: "VSSL is a sleek and compact vessel for survival gear. At about the same size and weight as a traditional heavy-duty flashlight, "
+                    +"VSSL includes fifteen different tools that help you survive the elements.The rugged aluminum tube screws onto a super-bright LED flashlight "
+                    +"on one end and an oil-filled compass on the other. In between, VSSL holds 7 additional weather-resistant metal canisters that nestle together, "
+                    +"each containing a valuable survival tool. VSSL packs in so much useful stuff that if it weren’t so serious, we’d call it a clown car of survival tools.", 
+                    website: "https://www.vat19.com/item/vssl-survival-kit-flashlight" , 
+                    facebook: "https://www.facebook.com/vat19", 
+                    twitter: "https://twitter.com/vat19", 
+                    instegram: "https://www.instagram.com/vat19/", 
+                    distrbutionDate: "May 1, 2015"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
                 twitterShare: false, 
                 instgramShare: false}, 
-        company: {  name: "Josh Renouf Design", 
-                    logo: "./img/The Barisieur/1516259_1448405478777540_1378550841_a.jpg", 
-                    description: "British designer with a tenacious attitude for innovation", 
-                    website: "http://www.joshrenoufdesign.com/" , 
-                    facebook: "https://www.facebook.com/barisieur", 
-                    twitter: "https://twitter.com/Renouf28", 
-                    instegram: "https://www.instagram.com/joshrenouf/"}},
-        
-        {product: { name: "The Golden Goose Egg Scrambler 3", 
-                    logo:"https://s3.amazonaws.com/images1.vat19.com/golden-goose/golden-goose.jpg", 
-                    pics:["./img/The Golden Goose Egg Scrambler/golden-goose.jpg", "./img/The Golden Goose Egg Scrambler/grid-cell-21963-1418321989-38.jpg"] , 
-                    shortDesc: "Scramble eggs without breaking the shell", 
-                    longDesc: "Have you ever enjoyed a scrambled hard-boiled egg? Trust us, you want to. Take the Golden Goose Egg Scrambler for a spin and serve up a perfectly scrambled "
-                    +"egg — without cracking it open! This ingenious device lets you scramble the egg from within its own shell.To create the flawless “Golden Goose” scramble, place a raw egg in the "
-                    +"elastic insert and secure the two sides with the locking ring. Then just wind the nylon cords and pull on the integrated handles to use centrifugal force to scramble the egg.The "
-                    +"locking ring makes sure the egg isn’t going anywhere, while the dishwasher-safe inserts cradle the egg and keep it whole while it scrambles. Within seconds, you’ll create a beautiful "
-                    +"golden egg you can crack open or boil.", 
+        company: {  name: "VAT19", 
+                    logo: "./img/The Golden Goose Egg Scrambler/-BAObucy_400x400.png", 
+                    description: "Curiously awesome gifts and Products.", 
                     website: "https://www.vat19.com/item/the-golden-goose-egg-scrambler" , 
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
+                    instegram: "https://www.instagram.com/vat19/"}},
+        
+        {product: { name: "Citrus Sprayers", 
+                    logo:"https://images.vat19.com/covers/large/citrus-sprayer.jpg", 
+                    pics:["./img/Citrus Sprayers/1.jpg", "./img/Citrus Sprayers/2.jpg", "./img/Citrus Sprayers/3.jpg", "./img/Citrus Sprayers/4.jpg", "./img/Citrus Sprayers/5.jpg", "./img/Citrus Sprayers/6.jpg"] , 
+                    shortDesc: "Spray fresh citrus juice directly from your fruit", 
+                    longDesc: "Give the Citrus Sprayer a few pumps to mist your salads, seafood, and cocktails with the freshest citrus juice straight from the source."
+                    +"After removing a small portion of the peel, screw the appropriate sprayer into a lime or lemon and pump the sprayer to get your juices flowing (and spritzing)!"
+                    +"The set includes both a large and small sprayer as well as a plastic tray for keeping your round fruit in one place while you’re not holding it.", 
+                    website: "https://www.vat19.com/item/citrus-sprayers" , 
+                    facebook: "https://www.facebook.com/vat19", 
+                    twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "Jul 1, 2015"}, 
+                    distrbutionDate: "May 1, 2015"}, 
+        user: { rating: 0, 
+                duration: 0, 
+                facebookShare: false, 
+                twitterShare: false, 
+                instgramShare: false}, 
+        company: {  name: "VAT19", 
+                    logo: "./img/The Golden Goose Egg Scrambler/-BAObucy_400x400.png", 
+                    description: "Curiously awesome gifts and Products.", 
+                    website: "https://www.vat19.com/item/the-golden-goose-egg-scrambler" , 
+                    facebook: "https://www.facebook.com/vat19", 
+                    twitter: "https://twitter.com/vat19", 
+                    instegram: "https://www.instagram.com/vat19/"}},
+        
+        {product: { name: "SlapLit LED Slap Bracelet", 
+                    logo:"https://images.vat19.com/covers/large/slaplit-led-bracelet-2.jpg", 
+                    pics:["./img/SlapLit LED Slap Bracelet/1.jpg", "./img/SlapLit LED Slap Bracelet/2.jpg", "./img/SlapLit LED Slap Bracelet/3.jpg", "./img/SlapLit LED Slap Bracelet/4.jpg", "./img/SlapLit LED Slap Bracelet/5.jpg", "./img/SlapLit LED Slap Bracelet/6.jpg"] , 
+                    shortDesc: "Slap bracelet with bright LED illumination", 
+                    longDesc: "The SlapLit combines ultra-fun 'slap it to snap it' slap bracelet functionality with ultra-bright LED illumination to create one awesome safety accessory."
+                    +"Turn it on, slap it on your wrist, ankle, or upper arm, and you've got instant nighttime visibility. Made from durable nylon, the SlapLit is perfect for walking, hiking, jogging, biking, "
+                    +"outdoor concerts, and general nighttime tomfoolery. Patterned with a reflective spiderweb design for added visibility, the water resistant SlapLit can be curled and flattened countless "
+                    +"times. A built-in grommet allows you to hang the SlapLit in straightened form to serve as an LED marker beacon. A simple press of a button switches the SlapLit from constant glow to "
+                    +"blinking light. Included lithium coin cell battery is easily replaceable and lasts for 100 hours.", 
+                    website: "https://www.vat19.com/item/slaplit-led-slap-bracelet" , 
+                    facebook: "https://www.facebook.com/vat19", 
+                    twitter: "https://twitter.com/vat19", 
+                    instegram: "https://www.instagram.com/vat19/", 
+                    distrbutionDate: "May 1, 2015"},
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
