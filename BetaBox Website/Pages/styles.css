@@ -497,6 +497,127 @@ h2 {
 	}
 	/* End of HTD */
 
+	/* Start of barisieur */
+	#barisieur {
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
+	#barisieur img {
+	    margin: 0 auto;
+	    display: inline-block;
+	    max-width: 40%;
+	    max-height: 70%;
+	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#barisieur ul {
+		display: inline-block;
+	    text-align: left;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	#barisieur li {
+    	font-size: 16px;
+    	list-style-type: square;
+ 	}
+ 	#barisieur p {
+	    display: inline-block;
+	    text-align: left;
+	    font-size: 16px;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	/* End of barisieur */
+
+	/* Start of citrus */
+	#citrus {
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
+	#citrus img {
+	    margin: 0 auto;
+	    display: inline-block;
+	    max-width: 40%;
+	    max-height: 70%;
+	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#citrus ul {
+		display: inline-block;
+	    text-align: left;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	#citrus li {
+    	font-size: 16px;
+    	list-style-type: square;
+ 	}
+ 	#citrus p {
+	    display: inline-block;
+	    text-align: left;
+	    font-size: 16px;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	/* End of citrus */
+
+	/* Start of goose */
+	#goose {
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
+	#goose img {
+	    margin: 0 auto;
+	    display: inline-block;
+	    max-width: 40%;
+	    max-height: 70%;
+	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#goose ul {
+		display: inline-block;
+	    text-align: left;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	#goose li {
+    	font-size: 16px;
+    	list-style-type: square;
+ 	}
+	/* End of goose */
+
 /*#menu li {
 	display:inline-block;
 	margin: 10px;

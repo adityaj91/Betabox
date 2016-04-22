@@ -1,13 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lékué Citrus Sprayer - BetaBox</title>
+    <meta name="author" content="Ashley Mannon" />
+    <meta name="description" content="BetaBox - Lékué Citrus Sprayer" />
+    <meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+    <meta name="Resource-type" content="Document" />
 
-Turn your citrus fruit into the freshest juice container! Spray directly from fruit to dress your recipes or aromatize your soft drinks and cocktails in the freshest way! Includes one large and one small citrus spayer, dish and instruction leaflet.
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    No need to use more than one utensil, no loss of vitamins nor oxidation of the juice
-    2 sizes: one for bigger fruits like lemons, oranges or grapefruits; another one for smaller fruits such as limes or tangerines
-    Easy to use: thanks to its screw-like design, it can be easily inserted and secured inside the fruit. Then the juice fills the filter through the holes where the sprayer collects the juice.
-    Comfortable: silicone ring prevents juice from coming out and the dish allows the fruit to stand when not using it
-    Dishwasher safe: made of ABS plastic and silicone 100% platinum stands up to 70°C (158°F) and 220°C (425°F) respectively
-    Detachable: comes apart completely for easy and thorough cleaning
+    <script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" href="http://104.131.132.179/Pages/media/logoOnly.png" type="image/png">
+    <style >
+    </style>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#f2f2f2', '#7BAABE', '#4BBFC3', 'whitesmoke', '#ccddff'],
+                paddingTop: '70px',
+                paddingBottom: '20px',
+                slidesNavigation: true,
+                autoScrolling: false
+            });
+        });
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+    </script>
 
+</head>
+<body>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tO8r99SVE_Q?list=UU7Ck8PnaXqNFwFimcVCea4A" frameborder="0" allowfullscreen></iframe>
+<div id="header">
+    <img src="img/logo.png"/>
+    <ul id="navigation" class="navigationPanel">
+        <li data-menuanchor="login" class="active"><a href="./login.html">Login</a></li>
+        <li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+        <li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+        <li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+        <li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+        <li data-menuanchor="contact"><a href="./contact.html">Contact Us</a></li>
+    </ul>
+</div>
+<div id="footer">
+</div>
+<div id="fullpage">
+    <div class="section active" id="section0">
+        <h2> Lékué Citrus Sprayer </h2>
+        <div class="slide active" id="citrus">
+            <img src="http://104.131.132.179/Pages/products/citrussprayer/cs2.jpg"/>
+           <p> Turn your citrus fruit into the freshest juice container! Spray directly from fruit to dress your recipes or aromatize your soft drinks and cocktails in the freshest way! Includes one large and one small citrus spayer, dish and instruction leaflet. </p>
+        </div>
+        <div class="slide" id="citrus">
+            <img src="http://104.131.132.179/Pages/products/citrussprayer/csall.jpg"/>
+            <ul>
+                <STRONG>Features & Specs</STRONG>
+                <li>No need to use more than one utensil, no loss of vitamins nor oxidation of the juice</li>
+                <br>
+                <li>2 sizes: one for bigger fruits like lemons, oranges or grapefruits; another one for smaller fruits such as limes or tangerines</li>
+                <br>
+                <li>Easy to use: thanks to its screw-like design, it can be easily inserted and secured inside the fruit. Then the juice fills the filter through the holes where the sprayer collects the juice.</li>
+                <br>
+                <li>Comfortable: silicone ring prevents juice from coming out and the dish allows the fruit to stand when not using it</li>
+                <br>
+                <li>Dishwasher safe: made of ABS plastic and silicone 100% platinum stands up to 70°C (158°F) and 220°C (425°F) respectively</li>
+                <br>
+                <li>Detachable: comes apart completely for easy and thorough cleaning</li>
+            </ul>
+        </div>
+        <div class="slide" id="citrus" align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tO8r99SVE_Q?list=UU7Ck8PnaXqNFwFimcVCea4A" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>
