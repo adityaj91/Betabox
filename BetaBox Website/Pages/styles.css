@@ -308,7 +308,7 @@ h2 {
 	#infographic1 img {
 		padding:40;
 	    margin:0 auto;
-	    min-height: 90%;
+	    max-height: 90%;
 	    vertical-align:bottom;
 	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
@@ -321,7 +321,6 @@ h2 {
 	}
 	#infographic2 img {
 	    margin:0 auto;
-	    
 	    height: 70%;
 	    width: 360px;
 		height: 360px;
@@ -417,25 +416,36 @@ h2 {
 	/* End of Seinfeld Stuff */
 
 	/* Start of VSSL */
+	#vssl {
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
 	#vssl img {
-	    margin:0 auto;
-	    max-height: 70%; 
+	    margin: 0 auto;
+	    display: inline-block;
 	    max-width: 40%;
+	    max-height: 70%;
 	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
 	}
-	#vssl p {
-		width:49%;
-	    display:inline-block;
-	    font-size: 12pt;
+	#vssl ul {
+		display: inline-block;
+	    text-align: left;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
 	    -moz-box-sizing:border-box;
 	    box-sizing:border-box;
 	}
-	#vssl video {
-	    display: inline-block; 
-	    
-	}
+	#vssl li {
+    font-size: 16px;
+    list-style-type: square;
+ }
 	/* End of VSSL */
 
 /*#menu li {
