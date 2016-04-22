@@ -169,6 +169,8 @@ h2 {
 
 /*Justin: 2/29 migraction from products to styles*/
 /*Decide on infographics or return them to local html files*/
+	
+	/* Start of Products*/
 	#infographic img {
 	    margin:0 auto;
 	    max-height: 70%; 
@@ -181,7 +183,7 @@ h2 {
 		height: 80%;
 		width:49%;
 	    display:inline-block;
-	    padding:20px;
+	    padding:2%;
 	    -moz-box-sizing:border-box;
 	    box-sizing:border-box;
 	}
@@ -226,7 +228,9 @@ h2 {
 	#productsVideo video {
 		max-width: 90%;
 	}
-	/*From Home*/
+	/* End of Products*/
+	
+	/*Start of Home*/
 	#product {
 		display: inline-block;
 	    margin: 0 auto;
@@ -443,10 +447,55 @@ h2 {
 	    box-sizing:border-box;
 	}
 	#vssl li {
-    font-size: 16px;
-    list-style-type: square;
- }
+    	font-size: 16px;
+    	list-style-type: square;
+ 	}
 	/* End of VSSL */
+
+	/* Start of HTD */
+	#htd {
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		margin: 0 auto;
+	}
+	#htd img {
+	    margin: 0 auto;
+	    display: inline-block;
+	    max-width: 40%;
+	    max-height: 70%;
+	    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 28px rgba(0, 0, 0, .8);
+	}
+	#htd ul {
+		display: inline-block;
+	    text-align: left;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	#htd li {
+    	font-size: 16px;
+    	list-style-type: square;
+ 	}
+ 	#htd p {
+	    display: inline-block;
+	    text-align: left;
+	    font-size: 16px;
+	    width:40%;
+	    margin: 0 auto;
+	    vertical-align: top;
+	    padding-top: 4%;
+	    margin-left: 8%;
+	    -moz-box-sizing:border-box;
+	    box-sizing:border-box;
+	}
+	/* End of HTD */
 
 /*#menu li {
 	display:inline-block;
