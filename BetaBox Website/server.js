@@ -1,16 +1,26 @@
 var express = require('express');
 var app = express();
 var http = require('http');
-var body = require('body-parser');
+var bodyParser = require('body-parser');
+var expressSession = require('express-session');
 var httpServer = http.Server(app);
 
 var mysql = require("mysql");
 
+
+
+app.use(express.static(__dirname+'/Pages'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSession({secret: 'PoorlySecuredSecret', saveUninitialized: true,
+    resave: true}));
+
 // First you need to create a connection to the db
 var con = mysql.createConnection({
-  host: "104.131.132.179",
+  host: "127.0.0.1",
   user: "root",
-  password: "Betab0x"
+  password: "Betab0x",
+  database: "Betabox",
+  port: '3306'
 });
 
 con.connect(function(err){
@@ -21,23 +31,41 @@ con.connect(function(err){
   console.log('Connection established');
 });
 
-con.end(function(err) {
-  // The connection is terminated gracefully
-  // Ensures all previously enqueued queries are still
-  // before sending a COM_QUIT packet to the MySQL server.
-});
-app.use(express.static(__dirname+'/Pages'));
 
+
+// con.end(function(err) {
+//   // The connection is terminated gracefully
+//   // Ensures all previously enqueued queries are still
+//   // before sending a COM_QUIT packet to the MySQL server.
+// });
+app.use( '/', function(req, res, next){
+	console.log("App Use Home user: " + req.session.user);
+  
+  next();
+});
 app.post('/home.html', function(req, res){
 	// post the code!
-	// var username = req.body.login;
-	// var pass = req.body.password;
+	var username = req.body.login;
+	var pass = req.body.password;
 	// sql.getTuple("users", username, pass);
-  res.sendFile(__dirname + '/Pages/home.html');
+	var query = 'SELECT * FROM MOCK_USERS WHERE userID = "' + username + '" AND password = "' + pass + '"  ; '
+	console.log("Query: " + query);
+	con.query(query ,function(err,rows){
+	  if(err) throw err;
+	  req.session.user = username;
+	  console.log('Data received from Db:\n');
+	  console.log(rows);
+	  console.log("reqses: " + req.session.user);
+	});
+	
+	console.log(username, pass);
+	console.log("LOGIN USER: " + req.session.user);
+  res.redirect('/');
 });
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/Pages/home.html');
+  console.log("Home user: " + req.session.user);
 });
 
 try{
