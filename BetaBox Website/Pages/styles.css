@@ -612,3 +612,13 @@ h2 {
     	list-style-type: square;
  	}
 	/* End of goose */
+
+	/* Start of Account Settings */
+	#info_setting {
+		font-size: 16pt;
+	}
+	#info_setting input, button{
+		font-size: 16pt;
+	}
+
+	/* End of Account Settings*/
