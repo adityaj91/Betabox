@@ -6,7 +6,7 @@ angular.module('betaBox.services', [])
       var deferred = $q.defer();
       var promise = deferred.promise;
 
-      if (name.toLowerCase() == 'test' && pw.toLowerCase() == 'test') {
+      if (name.toLowerCase() == 'test@asu.edu' && pw.toLowerCase() == 'test') {
         deferred.resolve('Welcome ' + name + '!');
       } else {
         deferred.reject('Wrong credentials.');

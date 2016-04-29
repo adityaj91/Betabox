@@ -43,7 +43,7 @@ angular.module('betaBox.controllers', ['ngCordova'])
   $scope.passwordRecovery= {email: "", securityAnswer: ""};
 
   $scope.emailPasswordRecovery = function() {
-    if($scope.passwordRecovery.email.toLowerCase() == "sam@asu.edu".toLowerCase()) {
+    if($scope.passwordRecovery.email.toLowerCase() == "test@asu.edu".toLowerCase()) {
       var alertPopup = $ionicPopup.alert({
         title: 'Account Found!',
         template: 'An email was just sent to you. Please check your inbox for the recovery process.'
