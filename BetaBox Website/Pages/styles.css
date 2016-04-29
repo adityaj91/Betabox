@@ -622,3 +622,24 @@ h2 {
 	}
 
 	/* End of Account Settings*/
+
+	/* Start of Contact Us */
+	#contact {
+		max-width: 90%;
+		margin: 0 auto;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: left;
+	}
+	#contact img {
+		float: left;
+		width: 30%;
+		margin: 0 auto;
+	}
+	#contact p {
+		margin: 0 auto;
+		margin-top: 5%;
+		padding-left: 25%;
+		text-align: center;
+	}
+	/* End of Contact Us*/
