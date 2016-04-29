@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<link rel="stylesheet" href="css/contact_form.css" />
-	<link rel="shortcut icon" href="http://104.131.132.179/Pages/media/logoOnly.png" type="image/png">
+	<link rel="shortcut icon" href="media/logoOnly.png" type="image/png">
 		<!-- Contact_form currently doesn't work. Code is functional alone, would currently send to justinreigel@yahoo.com (Will change after getting official email from project sponsor). But has a php with node conflict. (Find workaround in final sprint) -->
 		<!-- // <script src="contact_form.js"></script> -->
 	<style >
@@ -54,7 +54,7 @@
 <div id="header">
 	<img src="img/logo.png"/>
 	<ul id="navigation" class="navigationPanel">
-		<li data-menuanchor="login"><a href="./login.html">Login</a></li>
+		<!-- <li data-menuanchor="login"><a href="./login.html">Login</a></li> -->
 		<li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
 		<li data-menuanchor="team"><a href="./team.html">The Team</a></li>
 		<li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
@@ -68,12 +68,14 @@
 
 <div id="fullpage">
 
-	<div class="section active" id="section0"><h1>Contact Us</h1>
-		<div class = "inner">
-
-			<div id="mainform">
-			<!-- Required div starts here -->
-				<form id="form">
+	<div class="section active" id="section0"><h2>Contact Us</h2>
+		<div class="slide active" id="contact">
+			<img src="media/happyCheckmark.png"/><p>Betabox was founded in 2013 by Mondelez Global and Prehype to solve industry-wide product sampling problems. The team is comprised of experts in brand marketing, sampling, logistics, social media, and mobile-consumer technology. During Betabox's closed beta, the team has already begun working with many of the world's most notable brands.</p>
+		</div>
+		<!-- <div class = "inner"> -->
+			<!-- <div id="mainform">
+			<! Required div starts here -->
+			<!-- 	<form id="form">
 				<h3>Contact Form</h3>
 				 <p id="returnmessage"></p>
                                 <hr/><br/>
@@ -88,10 +90,8 @@
 				<br/>
 				<input type="button" id="submit" value="Send Message"/>
                                 <br/>
-            	</form>
-		
-
-		</div>
+            	</form> -->
+		<!-- </div> -->
 	</div>
 <!-- 	<div class="section" id="section1"><h1>Contact Us</h1></div>
 	<div class="section" id="section2"><h1>Contact Us</h1></div>
