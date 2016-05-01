@@ -11,8 +11,27 @@ angular.module('betaBox.controllers', ['ngCordova'])
   }
 })
 
-.controller('loginCtrl', function($scope, LoginService, $ionicPopup,$state, Prototypes, $ionicLoading) {
+.controller('loginCtrl', function($scope, LoginService, $ionicPopup,$state, Prototypes, $ionicLoading, ConnectionService) {
   $scope.data = {};
+
+  /*if(!ConnectionService.detectConnection()){
+    var alertPopup = $ionicPopup.alert({
+        title: 'Connection Error',
+        template: "Couldn't Connect to the database. Please try again later."
+      });
+  } else {*/
+    $ionicLoading.show({
+      template: 'Logging In...'
+    });
+    LoginService.autoLogin()
+    .success(function(data) {
+      $ionicLoading.hide();
+      Prototypes.filterAndSort('tabs.home', "None", true, "All", "All", "Last Month", "All");
+      $state.go('tabs.home');
+    }).error(function(data) {
+      $ionicLoading.hide();
+    });
+  //}
 
   $scope.login = function() {
     $ionicLoading.show({
@@ -29,6 +48,7 @@ angular.module('betaBox.controllers', ['ngCordova'])
         title: 'Login failed!',
         template: data
       });
+      $ionicLoading.hide();
     });
   }
 

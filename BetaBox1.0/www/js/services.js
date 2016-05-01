@@ -2,11 +2,31 @@ angular.module('betaBox.services', ['firebase'])
 
 .service('LoginService', function($q, firebaseReferences, $firebaseAuth) {
   return {
-    loginUser: function(name, pw) {
+    autoLogin: function() {
       var deferred = $q.defer();
       var promise = deferred.promise;
 
-        firebaseReferences.mainRef().unauth();
+        var user = firebaseReferences.mainRef().getAuth();
+
+        if (user==null) {
+          deferred.reject("User is not logged in");
+        } else {
+            deferred.resolve("Logged in user: "+user.uid);
+        }
+      promise.success = function(fn) {
+        promise.then(fn);
+        return promise;
+      }
+      promise.error = function(fn) {
+        promise.then(null, fn);
+        return promise;
+      }
+      return promise;
+    }, 
+
+    loginUser: function(name, pw) {
+      var deferred = $q.defer();
+      var promise = deferred.promise;
 
         firebaseReferences.mainRef().authWithPassword({
           "email": name,
@@ -14,7 +34,7 @@ angular.module('betaBox.services', ['firebase'])
         }, function(error, authData) {
           if (error) {
             console.log("Login Failed!", error);
-            deferred.reject(error+' Please check your credentials!');
+            deferred.reject(error);
           } else {
             console.log("Authenticated successfully with payload:", authData);
             deferred.resolve('Welcome ' + name + '!');
@@ -75,6 +95,27 @@ angular.module('betaBox.services', ['firebase'])
     logout: function() {
       firebaseReferences.mainRef().unauth();
       return true;
+    }
+  }
+})
+
+.service('ConnectionService', function(firebaseReferences, $firebaseAuth, $ionicLoading) {
+  return {
+    detectConnection: function() {
+        $ionicLoading.show({
+          template: 'Connecting to Database...'
+        });
+
+        var connectedRef = new Firebase("https://betabox.firebaseio.com/.info/connected");
+        connectedRef.on("value", function(snap) {
+          if (snap.val() === true) {
+            $ionicLoading.hide();
+            return true;
+          } else {
+            $ionicLoading.hide();
+            return false;
+          }
+        });
     }
   }
 })
@@ -189,7 +230,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/barisieur", 
                     twitter: "https://twitter.com/Renouf28", 
                     instegram: "https://www.instagram.com/joshrenouf/", 
-                    distrbutionDate: "April 1, 2016"}, 
+                    distrbutionDate: "May 1, 2016"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -216,7 +257,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "April 1, 2016"}, 
+                    distrbutionDate: "May 1, 2016"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -243,7 +284,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "April 1, 2016"}, 
+                    distrbutionDate: "May 1, 2016"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -269,7 +310,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "April 1, 2016"}, 
+                    distrbutionDate: "May 1, 2016"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -294,7 +335,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "April 1, 2016"}, 
+                    distrbutionDate: "May 1, 2016"}, 
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
@@ -321,7 +362,7 @@ angular.module('betaBox.services', ['firebase'])
                     facebook: "https://www.facebook.com/vat19", 
                     twitter: "https://twitter.com/vat19", 
                     instegram: "https://www.instagram.com/vat19/", 
-                    distrbutionDate: "April 1, 2016"},
+                    distrbutionDate: "May 1, 2016"},
         user: { rating: 0, 
                 duration: 0, 
                 facebookShare: false, 
