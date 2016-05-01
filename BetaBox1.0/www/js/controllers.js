@@ -11,17 +11,23 @@ angular.module('betaBox.controllers', ['ngCordova'])
   }
 })
 
-.controller('loginCtrl', function($scope, LoginService, $ionicPopup,$state, Prototypes) {
+.controller('loginCtrl', function($scope, LoginService, $ionicPopup,$state, Prototypes, $ionicLoading) {
   $scope.data = {};
 
   $scope.login = function() {
-    LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-    Prototypes.filterAndSort('tabs.home', "None", true, "All", "All", "Last Month", "All");
-    $state.go('tabs.home');
+    $ionicLoading.show({
+      template: 'Logging In...'
+    });
+    LoginService.loginUser($scope.data.username, $scope.data.password)
+    .success(function(data) {
+      $ionicLoading.hide();
+      Prototypes.filterAndSort('tabs.home', "None", true, "All", "All", "Last Month", "All");
+      $state.go('tabs.home');
     }).error(function(data) {
+      $ionicLoading.hide();
       var alertPopup = $ionicPopup.alert({
         title: 'Login failed!',
-        template: 'Please check your credentials!'
+        template: data
       });
     });
   }
@@ -31,35 +37,75 @@ angular.module('betaBox.controllers', ['ngCordova'])
   }
 })
 
-.controller('signupCtrl', function($scope, $state) {
+.controller('signupCtrl', function($scope, $state, SignUpService, $ionicPopup, $ionicLoading) {
   $scope.user = {};
+  $scope.accountCreated = false;
+  $scope.buttonText = "Next Step";
 
   $scope.signupComplete = function() {
-    $state.go('login');
+    if(!$scope.accountCreated) {
+      if($scope.user.password != $scope.user.confirmPassword) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Error!',
+          template: 'The passwords entered do not match.\nPlease try again.'
+        });
+      } else if(!$scope.user.termsAndConditionsChecked) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Error!',
+          template: 'Please agree to the terms and conditions to create the account.'
+        });
+      } else {
+        $ionicLoading.show({
+          template: 'Creating Account...'
+        });
+        SignUpService.createUser($scope.user.email, $scope.user.password)
+        .success(function(data) {
+          $ionicLoading.hide();
+          $scope.accountCreated = true;
+          $scope.buttonText = "Finish Signing Up";
+        }).error(function(data) {
+          $ionicLoading.hide();
+          var alertPopup = $ionicPopup.alert({
+            title: 'Signup failed!',
+            template: data
+          });
+        });
+      } 
+    } else {
+      if(SignUpService.addUserInfo($scope.user.email, $scope.user.password, $scope.user.firstName+" "+$scope.user.lastName, $scope.user.dateOfBirth, $scope.user.gender, 
+        $scope.user.address.street, $scope.user.address.city, $scope.user.address.state, $scope.user.address.zip, $scope.user.phoneNumber)) {
+        $state.go('login');
+      }
+    }
   }
 })
 
-.controller('forgottenPasswordCtrl', function($scope, $ionicPopup,$state) {
+.controller('forgottenPasswordCtrl', function($scope, LoginService, $ionicPopup,$state, $ionicLoading) {
   $scope.passwordRecovery= {email: "", securityAnswer: ""};
 
   $scope.emailPasswordRecovery = function() {
-    if($scope.passwordRecovery.email.toLowerCase() == "test@asu.edu".toLowerCase()) {
-      var alertPopup = $ionicPopup.alert({
-        title: 'Account Found!',
-        template: 'An email was just sent to you. Please check your inbox for the recovery process.'
+    $ionicLoading.show({
+      template: 'Reseting Password...'
+    });
+    LoginService.resetPassword($scope.passwordRecovery.email.toLowerCase())
+      .success(function(data) {
+          $ionicLoading.hide();
+        var alertPopup = $ionicPopup.alert({
+          title: 'Account Found!',
+          template: data
+        });
+      }).error(function(data) {
+          $ionicLoading.hide();
+        var alertPopup = $ionicPopup.alert({
+          title: 'Error',
+          template: data
+        });
       });
-    }
-    else {
-      var alertPopup = $ionicPopup.alert({
-        title: 'Email Invalid',
-        template: 'This email was not found in our database.'
-      });
-    };
   }
 
-  $scope.resetPassword = function() {
+  /*$scope.resetPassword = function() {
     $state.go('resetPassword');
-  }
+  }*/
 })
 
 .controller('resetPasswordCtrl', function($scope, $ionicPopup,$state) {
@@ -91,6 +137,17 @@ angular.module('betaBox.controllers', ['ngCordova'])
 
   $scope.goToProduct = function(productName) {
     $state.go('productDetail', {id: productName});
+  }
+})
+
+.controller('settingsCtrl', function($scope, $state, LogoutService, $ionicLoading) {
+  $scope.logout = function() {
+    $ionicLoading.show({
+      template: 'Logging you out...'
+    });
+    LogoutService.logout();
+    $ionicLoading.hide();
+    $state.go('login');
   }
 })
 

@@ -102,7 +102,8 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
     url: '/settings',
     views: {
       'settings-tab': {
-        templateUrl: 'templates/settings.html'
+        templateUrl: 'templates/settings.html',
+        controller: 'settingsCtrl'
       }
     }
   })

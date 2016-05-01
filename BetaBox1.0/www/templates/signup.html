@@ -5,6 +5,10 @@
 </ion-header-bar>
   <ion-content class="padding">
       <div class="list">
+      	<div ng-show="accountCreated">
+		<div class="item item-divider">
+			Personal Information
+		</div>
           <label class="item item-input">
 		    <span class="input-label">First Name</span>
 		    <input type="text" placeholder="ex. John" ng-model="user.firstName">
@@ -15,36 +19,64 @@
 		  </label>
 		  <label class="item item-input">
 		    <span class="input-label">Date of Birth</span>
-		    <input type="date" ng-model="user.dateOfBirth">
+		    <input type="text" ng-model="user.dateOfBirth">
 		  </label>
-		  <div class="row">
+		  <div class="item row">
 		  	<div class="col">
-		  		<h4>Gender:<h4>
+		  		<h2>Gender:<h2>
 		  	</div>
 		  	<div class="col col-75">
 			  <label class="item item-radio">
 			    <input type="radio" name="gender">
-				    <ion-radio ng-model="gender" ng-value="'A'">Male</ion-radio>
-				    <ion-radio ng-model="gender" ng-value="'B'">Female</ion-radio>
+				    <ion-radio ng-model="user.gender" ng-value="'Male'">Male</ion-radio>
+				    <ion-radio ng-model="user.gender" ng-value="'Female'">Female</ion-radio>
 			    <i class="radio-icon ion-checkmark"></i>
 			  </label>
 			</div>
 			</div>
+			<div class="item item-divider">
+				Contact Details
+			</div>
+			<label class="item item-input">
+		    <span class="input-label">Street Address</span>
+		    <input type="text" placeholder="ex. 1234 Example Street" ng-model="user.address.street">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">City</span>
+		    <input type="text" placeholder="ex. Phoenix" ng-model="user.address.city">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">State</span>
+		    <input type="text" placeholder="ex. Arizona" ng-model="user.address.state">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Zip Code</span>
+		    <input type="text" placeholder="ex. 12345" ng-model="user.address.zip">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Phone Number</span>
+		    <input type="text" placeholder="" ng-model="user.phoneNumber">
+		  </label>
+		</div> 
+		<div ng-hide="accountCreated">
+			<div class="item item-divider">
+			Account Information
+		</div>
 		  <label class="item item-input">
 		    <span class="input-label">Email</span>
 		    <input type="email" placeholder="ex@ample.com" ng-model="user.email">
 		  </label>
-		  <label class="item item-input">
+		  <!-- <label class="item item-input">
 		    <span class="input-label">Username</span>
-		    <input type="text" ng-minlength='3' placeholder="ex. JohnDoe13" ng-model="user.username">
-		  </label>
+		    <input type="text" placeholder="ex. JohnDoe13" ng-model="user.username">
+		  </label> -->
 		  <label class="item item-input">
 		    <span class="input-label">Password</span>
-		    <input type="password" ng-minlength='6' ng-maxlength='32' placeholder="ex. JohnDoe13" ng-model="user.password">
+		    <input type="password" placeholder="ex. JohnDoe13" ng-model="user.password">
 		  </label>
 		  <label class="item item-input">
 		    <span class="input-label">Confirm Password</span>
-		    <input type="password" ng-minlength='6' ng-maxlength='32' placeholder="ex. JohnDoe13" ng-model="user.confirmPassword">
+		    <input type="password" placeholder="ex. JohnDoe13" ng-model="user.confirmPassword">
 		  </label>
 		  <!-- <label class="item item-input item-select">
 		  	<div class="input-label">
@@ -60,14 +92,15 @@
 		    <span class="input-label">Answer</span>
 		    <input type="text" ng-model="user.securityAnswer">
 		  </label> -->
-      </div>
       	<h3>Terms and Conditions</h3>
       	<textarea rows="4" cols="40">
 		    This is a basic Card which contains an item that has wrapping text. Cards have become widely used in recent years. They're are a great way to contain and organize information, while also setting up predictable expectations for the user. With so much content to display at once, and often so little screen realestate, cards have fast become the design pattern of choice for many companies, including the likes of Google, Twitter, and Spotify..
 
 			For mobile experiences, Cards make it easy to display the same information visually across many different screen sizes. They allow for more control, are flexible, and can even be animated. Cards are usually placed on top of one another, but they can also be used like a "page" and swiped between, left and right. 
 		  </textarea>
-      	<ion-checkbox ng-model="termsAndConditionsChecked" required>Agree to the Terms and Conditions</ion-checkbox>
-      <button class="button button-block button-stable" ng-click="signupComplete()">Sign Up</button>
+      	<ion-checkbox ng-model="user.termsAndConditionsChecked" required>Agree to the Terms and Conditions</ion-checkbox>
+      </div>
+      </div>
+      <button class="button button-block button-stable" ng-click="signupComplete()">{{buttonText}}</button>
   </ion-content>
 </ion-view>

@@ -1,16 +1,62 @@
-angular.module('betaBox.services', [])
+angular.module('betaBox.services', ['firebase'])
 
-.service('LoginService', function($q) {
+.service('LoginService', function($q, firebaseReferences, $firebaseAuth) {
   return {
     loginUser: function(name, pw) {
       var deferred = $q.defer();
       var promise = deferred.promise;
 
-      if (name.toLowerCase() == 'test@asu.edu' && pw.toLowerCase() == 'test') {
+        firebaseReferences.mainRef().unauth();
+
+        firebaseReferences.mainRef().authWithPassword({
+          "email": name,
+          "password": pw
+        }, function(error, authData) {
+          if (error) {
+            console.log("Login Failed!", error);
+            deferred.reject(error+' Please check your credentials!');
+          } else {
+            console.log("Authenticated successfully with payload:", authData);
+            deferred.resolve('Welcome ' + name + '!');
+          }
+        });
+
+      /*if (name.toLowerCase() == 'test@asu.edu' && pw.toLowerCase() == 'test') {
         deferred.resolve('Welcome ' + name + '!');
       } else {
         deferred.reject('Wrong credentials.');
+      }*/
+      promise.success = function(fn) {
+        promise.then(fn);
+        return promise;
       }
+      promise.error = function(fn) {
+        promise.then(null, fn);
+        return promise;
+      }
+      return promise;
+    }, 
+
+    resetPassword: function(email) {
+        var deferred = $q.defer();
+        var promise = deferred.promise;
+
+        firebaseReferences.mainRef().resetPassword({
+          "email": email
+        }, function(error) {
+          if (error) {
+            switch (error.code) {
+              case "INVALID_USER":
+                deferred.reject('The specified user account does not exist: '+error);
+                break;
+              default:
+                deferred.reject('Error resetting password: '+error);
+            }
+          } else {
+            deferred.resolve("Password reset email sent successfully!");
+          }
+        });
+
       promise.success = function(fn) {
         promise.then(fn);
         return promise;
@@ -21,6 +67,109 @@ angular.module('betaBox.services', [])
       }
       return promise;
     }
+  }
+})
+
+.service('LogoutService', function(firebaseReferences, $firebaseAuth) {
+  return {
+    logout: function() {
+      firebaseReferences.mainRef().unauth();
+      return true;
+    }
+  }
+})
+
+.service('SignUpService', function($q, firebaseReferences, $firebaseAuth, $ionicLoading) {
+  return {
+    createUser: function(email, password) {
+      var deferred = $q.defer();
+      var promise = deferred.promise;
+
+        firebaseReferences.mainRef().createUser({
+          "email": email,
+          "password": password
+        }, function(error, userData) {
+          if (error) {
+            switch (error.code) {
+              case "EMAIL_TAKEN":
+                deferred.reject(error.code);
+                break;
+              case "INVALID_EMAIL":
+                deferred.reject(error.code);
+                break;
+              default:
+                deferred.reject(error.code);
+            }
+          } else {
+            deferred.resolve(userData.uid);
+          }
+        });
+
+      promise.success = function(fn) {
+        promise.then(fn);
+        return promise;
+      }
+      promise.error = function(fn) {
+        promise.then(null, fn);
+        return promise;
+      }
+      return promise;
+    },
+
+    addUserInfo: function (email, password, name, birthday, gender, address, city, state, zip, phoneNumber) {
+        var d = new Date();
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth();
+        curr_month++;
+        var curr_year = d.getFullYear();
+
+        $ionicLoading.show({
+          template: 'Updateing Your Data...'
+        });
+
+        firebaseReferences.mainRef().authWithPassword({
+          "email": email,
+          "password": password
+        }, function(error, authData) {
+          if (error) {
+            console.log("Login Failed!", error);
+          } else {
+            console.log("Authenticated successfully with payload:", authData);
+            var dateEnrolled = curr_month + "/" + curr_date + "/" + curr_year;
+            firebaseReferences.usersRef().push({'email': email, 'password': password, 'name': name, 'birthday': birthday, 'gender': gender, 
+                    'address': address, 'city': city, 'state': state, 'zip': zip, 'phoneNumber': phoneNumber, 
+                    'dateEnrolled': dateEnrolled, 'subscriptionStatus': "PENDING"});
+
+
+            $ionicLoading.hide();
+            firebaseReferences.mainRef().unauth();
+          }
+        });
+
+        return true;
+    }
+  }
+})
+
+.factory('firebaseReferences', function($firebase) {
+    var mainRef = new Firebase("https://betabox.firebaseio.com/"),
+      usersRef = new Firebase("https://betabox.firebaseio.com/users");
+
+    /*var companiesRef = new Firebase("https://betabox.firebaseio.com/companies"),
+        productsRef = new Firebase("https://betabox.firebaseio.com/products");*/
+  return {
+    mainRef: function () {
+      return mainRef;
+    },
+    usersRef: function () {
+      return usersRef;
+    }/*,
+    companiesRef: function () {
+      return companiesRef;
+    },
+    productsRef: function () {
+      return productsRef;
+    }*/
   }
 })
 
