@@ -1,0 +1,18 @@
+<ion-view title="Search Results">
+	<ion-header-bar align-title="center" class="bar-dark">
+	<a class="button icon-left ion-chevron-left button-clear button-light" ng-click="goBack()">Back</a>
+	  <h1 class="title">Search Results</h1>
+    <!-- <button class="button button-icon icon ion-navicon-round"></button> -->
+	</ion-header-bar>   
+  <ion-content padding="true">
+  	<div class="list">
+        <a ng-repeat="item in searchResults" 
+           ng-click="goToResult(item.object.name, item.type)"
+           class="item item-thumbnail-left">
+          <img ng-src="{{ item.object.pics[0] }}">
+          <h2>{{ item.object.name }}</h2>
+          <h4>{{ item.type }}</h4>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

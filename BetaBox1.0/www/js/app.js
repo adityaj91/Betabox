@@ -82,7 +82,8 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
     views: {
       'mainView': {
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'templates/tabs.html',
+        controller: 'tabsCtrl'
       }
     }
   })
@@ -101,7 +102,8 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
     url: '/settings',
     views: {
       'settings-tab': {
-        templateUrl: 'templates/settings.html'
+        templateUrl: 'templates/settings.html',
+        controller: 'settingsCtrl'
       }
     }
   })
@@ -132,6 +134,16 @@ angular.module('betaBox', ['ionic', 'betaBox.controllers', 'betaBox.services'])
       'mainView': {
         templateUrl: 'templates/companyDetail.html',
         controller: 'companyDetailCtrl'
+      }
+    }
+  })
+
+  .state('searchResults', {
+    url: '/searchResults',
+    views: {
+      'mainView': {
+        templateUrl: 'templates/searchResults.html',
+        controller: 'searchResultsCtrl'
       }
     }
   });

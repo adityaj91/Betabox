@@ -1,14 +1,113 @@
-<ion-tabs class="tabs-black tabs-icon-top">
+<ion-side-menus>
 
-  <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline"  href="#/tab/home">
-    <ion-nav-view name="home-tab"></ion-nav-view>
-  </ion-tab>
+  <ion-side-menu-content>
+    <ion-nav-bar align-title="center" class="bar-dark nav-title-slide-ios7">
+      <!-- <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button> -->
+    </ion-nav-bar>
+    <ion-tabs class="tabs-black tabs-icon-top">
 
-  <ion-tab title="Archive" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" href="#/tab/archive">
-    <ion-nav-view name="archive-tab"></ion-nav-view>
-  </ion-tab>
+	  <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline"  href="#/tab/home">
+	    <ion-nav-view name="home-tab"></ion-nav-view>
+	  </ion-tab>
 
-  <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" href="#/tab/settings">
-    <ion-nav-view name="settings-tab"></ion-nav-view>
-  </ion-tab>
-</ion-tabs>
+	  <ion-tab title="Archive" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" href="#/tab/archive">
+	    <ion-nav-view name="archive-tab"></ion-nav-view>
+	  </ion-tab>
+
+	  <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" href="#/tab/settings">
+	    <ion-nav-view name="settings-tab"></ion-nav-view>
+	  </ion-tab>
+	</ion-tabs>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Options</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear>
+          <div ng-click="sort()"><i class="icon {{sortIcon}}"></i><STRONG> Sort</STRONG></div>
+          	<div ng-show="sorting">
+	          	<div></br></div>
+	          	<ion-list>
+				  	<ion-radio icon="{{sort.direction}}" ng-click="changeSortDirection()" ng-repeat="item in sortingOptions"
+			                   ng-value="item.value"
+			                   ng-model="sort.selected">
+			          {{ item.text }}
+			        </ion-radio>
+				</ion-list>
+			</div>
+        </ion-item>
+        <ion-item nav-clear>
+          <div ng-click="filter()"><i class="icon {{filterIcon}}"></i><STRONG> Filter</STRONG></div>
+          	<div class = "list" ng-show="filtering">
+          		<div></br></div>
+			   	<label class = "item item-input item-select">
+				   <div class = "input-label">
+				      From
+				   </div>
+					
+				   <select ng-model="filter.selectedCompany">
+				      <option value="All" selected>All</option>
+				      <option ng-repeat="company in companiesList" value="{{company}}">{{company}}</option>
+				   </select>
+				</label>
+
+			   	<label class = "item item-input item-select">
+				   <div class = "input-label">
+				      Rate
+				   </div>
+					
+				   <select ng-model="filter.selectedRate">
+				      <option value="All" selected>All</option>
+				      <option value="Not Rated">Not Rated</option>
+				      <option value="Rated">Rated</option>
+				      <option value="Happy">Happy</option>
+				      <option value="Neutral">Neutral</option>
+				      <option value="Sad">Sad</option>
+				   </select>
+				</label>
+
+				<label class = "item item-input item-select">
+				   <div class = "input-label">
+				      Since
+				   </div>
+					
+				   <select ng-model="filter.selectedDuration">
+				      <option>All</option>
+				      <option selected>Last Month</option>
+				      <option>3 months ago</option>
+				      <option>6 months ago</option>
+				      <option>Last Year</option>
+				   </select>
+				</label>
+
+				<label class = "item item-input item-select">
+				   <div class = "input-label">
+				      Category
+				   </div>
+					
+				   <select ng-model="filter.selectedCategory">
+				      <option selected>All</option>
+				      <option ng-repeat="company in companiesList">{{ company }}</option>
+				   </select>
+				</label>
+			</div>
+        </ion-item>
+        <ion-item nav-clear>
+          <div ng-click="search()"><i class="icon ion-search"></i><STRONG> Search </STRONG></div>
+          <div class="list list-inset" ng-show="searching">
+          	<label class="item item-input">
+          		<i class="icon ion-search placeholder-icon"></i>
+          		<input type="text" placeholder="What are you looking for?" ng-model="searchField.data">
+          	</label>
+          </div>
+        </ion-item>
+      </ion-list>
+      <button class="button button-small button-block button-outline button-dark" ng-click="applyOptions()">
+      	Apply
+      </button>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

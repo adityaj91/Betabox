@@ -1,6 +1,6 @@
 <ion-view title="companyDetail">
 	<ion-header-bar align-title="center" class="bar-dark">
-	<a class="button icon-left ion-chevron-left button-clear button-light" ng-click="goToProduct(prototype.product.name)">Back</a>
+	<a class="button icon-left ion-chevron-left button-clear button-light" ng-click="goBack()">Back</a>
 	  <h1 class="title">{{prototype.company.name}}</h1>
 	</ion-header-bar>
 <ion-content>
@@ -20,12 +20,12 @@
     </p>
     <h4><strong>Products List:</strong></h4>
     <div class="list card">
-        <a
-           ng-click="goToProduct(prototype.product.name)"
+        <a ng-repeat="product in productsList"
+           ng-click="goToProduct(product.name)"
            class="item item-thumbnail-left">
-          <img ng-src="{{ prototype.product.logo }}">
-          <h2>{{ prototype.product.name}}</h2>
-          <h4>{{ prototype.product.shortDesc }}</h4>
+          <img ng-src="{{ product.pics[0] }}">
+          <h2>{{ product.name}}</h2>
+          <h4>{{ product.shortDesc }}</h4>
         </a>
     </div>
   </div>
