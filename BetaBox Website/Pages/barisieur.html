@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Barisieur - BetaBox</title>
+    <meta name="author" content="Ashley Mannon" />
+    <meta name="description" content="BetaBox - The Barisieur" />
+    <meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+    <meta name="Resource-type" content="Document" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" href="media/logoOnly.png" type="image/png">
+    <style >
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#f2f2f2', '#7BAABE', '#4BBFC3', 'whitesmoke', '#ccddff'],
+                paddingTop: '70px',
+                paddingBottom: '20px',
+                slidesNavigation: true,
+                autoScrolling: false
+            });
+        });
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="header">
+    <img src="img/logo.png"/>
+    <ul id="navigation" class="navigationPanel">
+        <li data-menuanchor="login" class="active"><a href="./login.html">Login</a></li>
+        <li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+        <li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+        <li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+        <li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+        <li data-menuanchor="contact"><a href="./contact.html">Contact Us</a></li>
+    </ul>
+</div>
+<div id="footer">
+</div>
+<div id="fullpage">
+    <div class="section active" id="section0">
+        <h2> The Barisieur </h2>
+        <div class="slide active" id="barisieur">
+            <img src="products/barisieur/barisieur00.jpg"/>
+           <p> An alarm clock and coffee brewer. It eases the user into the day with the subtle movement of stainless steel ballbearings that boil the water through induction heating, accompanied by the smell of freshly brewed coffee. It encourages a ritual before going to sleep, signalling to the body and mind that it is time to unwind and relax. Living slow even when times are fast.</p>
+        </div>
+        <div class="slide" id="barisieur">
+            <img src="products/barisieur/barisieur2.jpg"/>
+            <ul>
+                <STRONG>Features & Specs</STRONG>
+                <li>Press the dispenser button to automatically dispense tape to any desired length</li>
+                <li>Release the button and the dispenser automatically cuts the tape</li>
+                <li>Can be used with one hand only</li>
+                <li>Ideal for home, office, store and warehouse use</li>
+                <li>Tape thickness is 0.05 - 0.07 mm and tape size is 19 mm (3/4") width x 32.9 meter (1,296") length</li>
+                <li>Works without batteries!</li>
+            </ul>
+        </div>
+        <div class="slide" id="barisieur" align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R9-iFa0amsk" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="slide active" id="infographic1">
+            <img src="products/barisieur/barisieur1.jpg"/>
+        </div>
+        <div class="slide" id="infographic1">
+            <img src="products/barisieur/barisieur4.jpg"/>
+        </div>
+        <div class="slide" id="infographic1">
+            <a href="./products/barisieur/barisieur2.jpg" target="_blank">
+                <img src="products/barisieur/barisieurall.jpg"/></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

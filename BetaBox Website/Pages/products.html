@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Products - BetaBox</title>
+	<meta name="author" content="Mohammed Alyahya, Ashley Mannon" />
+	<meta name="description" content="BetaBox Home Page." />
+	<meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="shortcut icon" href="media/logoOnly.png" type="image/png">
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  		ga('create', 'UA-76544650-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#7BAABE', '#4BBFC3', 'whitesmoke', '#ccddff'],
+				paddingTop: '70px',
+				paddingBottom: '20px',
+				slidesNavigation: true,
+				autoScrolling: false
+			});
+		});
+		$(function(){
+		  $("#footer").load("footer.html"); 
+		});
+	</script>
+
+</head>
+<body>
+<div id="header">
+	<img src="img/logo.png"/>
+	<ul id="navigation" class="navigationPanel">
+		<!-- <li data-menuanchor="login"><a href="./login.html">Login</a></li> -->
+		<li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+		<li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+		<li data-menuanchor="product" class="active"><a href="./products.html">Our Products</a></li>
+		<li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+		<li data-menuanchor="contact"><a href="./contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<div id="footer">
+</div>
+
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<h2>Top Picks</h2>
+		<div class="slide active" id="infographic">
+			<a href="./barisieur.html" target="_blank">
+				<img src="products/barisieur/barisieur0.jpg"/></a>
+	    	<p><STRONG>The Barisieur</STRONG><br>An alarm clock and coffee brewer.</p>
+	    </div>
+	    <div class="slide" id="infographic">
+	    	<a href="./goldengoose.html" target="_blank">
+				<img src="products/goldengoose/goldengoose2.jpg"/></a>	    	
+	    	<p><STRONG>Golden Goose Egg Scrambler</STRONG><br>Scamble the eggs inside the shell!</p>
+	    </div>
+	    <div class="slide" id="infographic">
+	    	<a href="./thebro.html" target="_blank">
+				<img src="products/bro/thebrologo.jpg"/></a>
+	    	<p><STRONG>The Bro</STRONG><br>A bra for Men.</p>
+	    </div>
+	    <div class="slide" id="infographic">
+	    	<a href="./citrussprayer.html" target="_blank">
+				<img src="products/citrussprayer/cs1.jpg"/></a>
+	    	<p><STRONG>Lékué Citrus Sprayer</STRONG><br>Turn your citrus fruit into the freshest juice container!</p>
+	    </div>
+	</div>
+	<div class="section" id="section1">
+		<h2>Newest Items</h2>
+	    <div class="slide active" id="infographic">
+	    	<a href="./htd.html" target="_blank">
+				<img src="products/htd/htd1.jpg"/></a>
+	    	<p><STRONG>Handheld Automatic Tape Dispenser</STRONG><br>The single button load and cut system allows you to quickly cut tape in one motion & with only one hand.</p>
+	    </div>
+	    <div class="slide" id="infographic">
+	    	<a href="./vssl.html" target="_blank">
+				<img src="products/vssl/vssl1.jpg"/></a>
+	    	<p><STRONG>VSSL Survival Kit + Flashlight</STRONG><br>A sleek and compact vessel for survival gear.</p>
+	    </div>
+	    <div class="slide" id="infographic">
+	    	<a href="./tie.html" target="_blank">
+				<img src="products/tiedispenser/td1.png"/></a>
+	    	<p><STRONG>Tie Dispenser</STRONG><br>Spill on your tie? No problem!!</p>
+	    </div>
+	</div>
+	<div class="section" id="section2">
+		<h2>Best Promotional Video</h2>
+		<div id="productsVideo">
+			<video controls autoplay loop muted >
+			  <source src="media/oldSpice.mp4" type="video/mp4">
+			  <source src="media/oldSpice.tiff" type="video/webm">
+			  Your browser does not support the video tag.
+			</video>
+	    	<!-- <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut ipsum posuere, consectetur purus eget, blandit orci.</p> -->
+	    </div>
+	</div>
+	<div class="section" id="section3">
+		<div id="verticalTextBox">
+			<p><STRONG>Package 1</STRONG><br>
+				<img id="product1" src="media/sample.png"/><br><STRONG>Monthly Subscription
+				</STRONG><br>5 products a month, paid monthly.</p><br><br>
+			<a href="./home.html" class="Linkbutton">$20</a>
+		</div>
+		<div id="verticalTextBox">
+			<p><STRONG>Package 2</STRONG><br>
+				<img id="product2" src="media/sample6.png"/><br><STRONG>6 Month Subscription</STRONG><br>5 products a month, for 6 months.</p><br><br>
+			<a href="./home.html" class="Linkbutton">$100</a>
+		</div>
+		<div id="verticalTextBox">
+			<p><STRONG>Package 3</STRONG><br>
+				<img id="product3" src="media/sample12.png"/><br><STRONG>1 Year Subscription</STRONG><br>5 products a month, for one year.</p><br><br>
+			<a href="./home.html" class="Linkbutton">$150</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

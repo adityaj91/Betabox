@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTD - BetaBox</title>
+    <meta name="author" content="Ashley Mannon" />
+    <meta name="description" content="BetaBox - Handheld Automated Tape Dispenser" />
+    <meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+    <meta name="Resource-type" content="Document" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" href="media/logoOnly.png" type="image/png">
+    <style >
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#f2f2f2', '#7BAABE', '#4BBFC3', 'whitesmoke', '#ccddff'],
+                paddingTop: '70px',
+                paddingBottom: '20px',
+                slidesNavigation: true,
+                autoScrolling: false
+            });
+        });
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="header">
+    <img src="img/logo.png"/>
+    <ul id="navigation" class="navigationPanel">
+        <li data-menuanchor="login" class="active"><a href="./login.html">Login</a></li>
+        <li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+        <li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+        <li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+        <li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+        <li data-menuanchor="contact"><a href="./contact.html">Contact Us</a></li>
+    </ul>
+</div>
+<div id="footer">
+</div>
+<div id="fullpage">
+    <div class="section active" id="section0">
+        <h2> Handheld Automatic Tape Dispenser </h2>
+        <div class="slide active" id="htd">
+            <img src="products/htd/htd2.jpg"/>
+           <p> Handheld tape dispenser is quick, easy and safe to use. Features a unique ergonomic design that’s comfortable to hold even for long periods. The single button load and cut system allows you to quickly cut tape in one motion & with only one hand. </p>
+        </div>
+        <div class="slide" id="htd">
+            <img src="products/htd/htd3.jpg"/>
+            <ul>
+                <STRONG>Features & Specs</STRONG>
+                <li>Press the dispenser button to automatically dispense tape to any desired length</li>
+                <li>Release the button and the dispenser automatically cuts the tape</li>
+                <li>Can be used with one hand only</li>
+                <li>Ideal for home, office, store and warehouse use</li>
+                <li>Tape thickness is 0.05 - 0.07 mm and tape size is 19 mm (3/4") width x 32.9 meter (1,296") length</li>
+                <li>Works without batteries!</li>
+            </ul>
+        </div>
+        <div class="slide" id="htd" align="center">
+            <iframe width="560" height="315" src="http://www.videoclub.pk/embed/-FXgYee03lU" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

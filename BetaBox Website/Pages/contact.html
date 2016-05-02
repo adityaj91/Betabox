@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Contact - BetaBox</title>
+	<meta name="author" content="Mohammed Alyahya" />
+	<meta name="description" content="BetaBox Contact Page." />
+	<meta name="keywords"  content="BetaBox,Beta Box,Beta,Box,Prototype" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" href="css/contact_form.css" />
+	<link rel="shortcut icon" href="media/logoOnly.png" type="image/png">
+		<!-- Contact_form currently doesn't work. Code is functional alone, would currently send to justinreigel@yahoo.com (Will change after getting official email from project sponsor). But has a php with node conflict. (Find workaround in final sprint) -->
+		<!-- // <script src="contact_form.js"></script> -->
+	<style >
+		.inner {
+		    width: 20%;
+		    margin: 0 auto; 
+		}
+	</style>
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  		ga('create', 'UA-76544650-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#7BAABE', '#4BBFC3', 'whitesmoke', '#ccddff'],
+				paddingTop: '70px',
+				paddingBottom: '20px',
+				slidesNavigation: false,
+				autoScrolling: false
+			});
+		});
+		$(function(){
+		  $("#footer").load("footer.html"); 
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="header">
+	<img src="img/logo.png"/>
+	<ul id="navigation" class="navigationPanel">
+		<!-- <li data-menuanchor="login"><a href="./login.html">Login</a></li> -->
+		<li data-menuanchor="home"><a href="./home.html">Home Page</a></li>
+		<li data-menuanchor="team"><a href="./team.html">The Team</a></li>
+		<li data-menuanchor="product"><a href="./products.html">Our Products</a></li>
+		<li data-menuanchor="blog"><a href="./blog.html">Our Blog</a></li>
+		<li data-menuanchor="contact" class="active"><a href="./contact.html">Contact Us</a></li>
+	</ul>
+</div>
+<div id="footer">
+</div>
+
+
+<div id="fullpage">
+
+	<div class="section active" id="section0"><h2>Contact Us</h2>
+		<div class="slide active" id="contact">
+			<img src="media/contact.png"/><p>Email: info@betabox.com<br> Phone: 951-262-3062<br> Address: 7001 E Williams Field Rd<br>Mesa, AZ 85212 </p>
+		</div>
+		<!-- <div class = "inner"> -->
+			<!-- <div id="mainform">
+			<! Required div starts here -->
+			<!-- 	<form id="form">
+				<h3>Contact Form</h3>
+				 <p id="returnmessage"></p>
+                                <hr/><br/>
+				<br/>
+				<input type="text" id="name" placeholder="What do we call you?"/><br/>
+				<br/>
+				<br/>
+				<input type="text" id="email" placeholder="Where can we email you back?"/><br/>
+				<br/>
+				<br/>				
+                                <textarea id="message" placeholder="What's on your mind?"></textarea><br/>
+				<br/>
+				<input type="button" id="submit" value="Send Message"/>
+                                <br/>
+            	</form> -->
+		<!-- </div> -->
+	</div>
+<!-- 	<div class="section" id="section1"><h1>Contact Us</h1></div>
+	<div class="section" id="section2"><h1>Contact Us</h1></div>
+	<div class="section" id="section3"><h1>Contact Us</h1></div> -->
+</div>
+
+</body>
+</html>
